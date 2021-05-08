@@ -1,14 +1,10 @@
 <?php
   headerAdmin($data);
 ?>
-
-<div id="contentAjax"></div>
-
+<div id="contentAjax">
+</div>
 <div class="wrapper">
-
-  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
@@ -16,104 +12,174 @@
             <h1 class="m-0">  <?= $data['page_title'] ?>
               <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-plus-circle fa-md"></i> Nuevo</button>
             </h1>
-          </div><!-- /.col -->
+          </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><i class="fa fa-home fa-md"></i><a href="#">Home</a></li>
               <li class="breadcrumb-item active"><a href="<?= base_url(); ?>/roles"><?= $data['page_title'] ?></a></li>
             </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- /.content-header -->
-
-    <!-- Main content -->
     <div class="content">
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-12">
-
-
             <div class="card">
-              <div class="card-body">
-                <h3 class="card-title">Listado de Libros</h3>
-                <p class="card-text">
-              <!-- /.card-header -->
-                <table id="tableRoles" class="table table-bordered table-striped table-sm">
-                  <thead>
-                  <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Descripción</th>
-                    <th>Estatus</th>
-                    <th>Acciones</th>
-                  </tr>
-                  </thead>
-                  <tbody>
+              <div class="card-body row">
 
-                  </tbody>
 
-                </table>
-              </p>
+                <div class="col-lg-3 col-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col mt-0">
+                          <h5 class="card-title">Libros</h5>
+                        </div>
+                        <div class="col-auto">
+                          <div class="avatar">
+                            <div class="avatar-title rounded-circle bg-primary-light">
+                              <i class="ion-ios-book" style="zoom:2.0;"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <h1 class="mt-1 mb-3">132</h1>
+                      <div class="mb-0">
+                        <!--<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>-->
+                        <span class="text-muted">Titulos Existentes</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col mt-0">
+                          <h5 class="card-title">Prestamos</h5>
+                        </div>
+                        <div class="col-auto">
+                          <div class="avatar">
+                            <div class="avatar-title rounded-circle bg-primary-light">
+                              <i class="ion ion-heart" style="zoom:2.0;"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <h1 class="mt-1 mb-3">10</h1>
+                      <div class="mb-0">
+                        <!--<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>-->
+                        <span class="text-muted">Libros Prestados</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col mt-0">
+                          <h5 class="card-title">Devoluciones</h5>
+                        </div>
+                        <div class="col-auto">
+                          <div class="avatar">
+                            <div class="avatar-title rounded-circle bg-primary-light">
+                              <i class="ion ion-ios-undo" style="zoom:2.0;"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <h1 class="mt-1 mb-3">23</h1>
+                      <div class="mb-0">
+                        <!--<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>-->
+                        <span class="text-muted">Títulos Devueltos</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col mt-0">
+                          <h5 class="card-title">Usuarios</h5>
+                        </div>
+                        <div class="col-auto">
+                          <div class="avatar">
+                            <div class="avatar-title rounded-circle bg-primary-light">
+                              <i class="ion ion-person" style="zoom:2.0;"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <h1 class="mt-1 mb-3">421</h1>
+                      <div class="mb-0">
+                        <!--<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>-->
+                        <span class="text-muted">Total Usuarios</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col mt-0">
+                          <h5 class="card-title">Autores</h5>
+                        </div>
+                        <div class="col-auto">
+                          <div class="avatar">
+                            <div class="avatar-title rounded-circle bg-primary-light">
+                              <i class="ion ion-person-stalker" style="zoom:2.0;"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <h1 class="mt-1 mb-3">132</h1>
+                      <div class="mb-0">
+                        <!--<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>-->
+                        <span class="text-muted">Total Autores</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col mt-0">
+                          <h5 class="card-title">Categorías</h5>
+                        </div>
+                        <div class="col-auto">
+                          <div class="avatar">
+                            <div class="avatar-title rounded-circle bg-primary-light">
+                              <i class="ion ion-pie-graph" style="zoom:2.0;"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <h1 class="mt-1 mb-3">132</h1>
+                      <div class="mb-0">
+                        <!--<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>-->
+                        <span class="text-muted">Total Categorías</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               </div>
-              <!-- /.card-body -->
             </div>
-
-
-<!--
-            <div class="card shadow-sm p-3 mb-5 bg-white rounded">
-              <div class="card-body">
-                <h5 class="card-title">Planteles</h5>
-
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the card's
-                  content.
-                </p>
-
-                <a href="#" class="card-link">link uno</a>
-                <a href="#" class="card-link">link dos</a>
-              </div>
-            </div>-->
-
-
-          <!-- /.card -->
           </div>
-          <!-- /.col-md-6 -->
-       <!--   <div class="col-lg-12">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="m-0">Featured</h5>
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">Special title treatment</h6>
-
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>-->
-          <!-- /.col-md-6 -->
         </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
+      </div>
     </div>
-    <!-- /.content -->
   </div>
-  <!-- /.content-wrapper -->
-
-  <!-- Control Sidebar -->
-
-  <!--<aside class="control-sidebar control-sidebar-dark">
-     Control sidebar content goes here -->
-    <!--<div class="p-3">
-      <h5>Title</h5>
-      <p>Sidebar content</p>
-    </div>
-  </aside>-->
-  <!-- /.control-sidebar -->
-
 </div>
-<!-- ./wrapper -->
-
 <?php footerAdmin($data); ?>
