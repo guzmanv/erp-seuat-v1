@@ -17,10 +17,11 @@ class Biblioteca extends Controllers
 		$this->views->getView($this,"administrador_categorias",$data);
 	}
 	public function getCategorias(){
-		$arrData = $this->model->selectCategorias();
-
+		$arrData = $this->model->selectRoles();
 			for ($i=0; $i < count($arrData); $i++) {
-
+				var_dump($arrData[$i]);
+				/*
+			
 				if($arrData[$i]['estatus'] == 1)
 				{
 					$arrData[$i]['estatus'] = '<span class="badge badge-success">Activo</span>';
@@ -32,9 +33,9 @@ class Biblioteca extends Controllers
 				<button class="btn btn-secondary btn-sm btnPermisosRol" rl="'.$arrData[$i]['id'].'" title="Permisos"><i class="fas fa-key"></i></button>
 				<button class="btn btn-primary btn-sm btnEditRol" rl="'.$arrData[$i]['id'].'" title="Editar"><i class="fas fa-pencil-alt"></i></button>
 				<button class="btn btn-danger btn-sm btnDelRol" rl="'.$arrData[$i]['id'].'" title="Eliminar"><i class="far fa-trash-alt"></i></button>
-				</div>';
+				</div>';*/
 			}
-			echo json_encode($arrData,JSON_UNESCAPED_UNICODE);
+			//echo json_encode($arrData,JSON_UNESCAPED_UNICODE);
 			die();
 	}
 }

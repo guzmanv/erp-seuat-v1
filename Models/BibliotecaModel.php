@@ -15,7 +15,7 @@
 		public function selectRoles()
 		{
 			//Extraer Roles
-			$sql = "SELECT * FROM rol WHERE estatus !=0";
+			$sql = "SELECT * FROM libros_categorias";
 			$request = $this->select_all($sql);
 			return $request;
 		}
