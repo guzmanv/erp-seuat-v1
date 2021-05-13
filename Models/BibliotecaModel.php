@@ -12,7 +12,7 @@
 			parent::__construct();
 		}
 
-		public function selectRoles()
+		public function selectCategorias()
 		{
 			//Extraer Roles
 			$sql = "SELECT * FROM libros_categorias";

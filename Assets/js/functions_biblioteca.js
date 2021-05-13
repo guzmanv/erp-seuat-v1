@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', function(){
         },
         "columns":[
             {"data":"id"},
-            {"data":"nombrerol"},
-            {"data":"descripcion"},
-			{"data":"descripcion"},
-            {"data":"estatus"},
+            {"data":"nombreCategoria"},
+			{"data":"creadoDate"},
+            {"data":"actualizadoDate"},
+			{"data":"status"},
             {"data":"options"}
 
         ],

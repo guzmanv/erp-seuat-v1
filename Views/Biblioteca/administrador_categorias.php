@@ -38,9 +38,9 @@
                           <tr>
                             <th>#</th>
                             <th>Categoria</th>
-                            <th>Status</th>
                             <th>Creado en:</th>
                             <th>Actualizado en:</th>
+                            <th>Status</th>
                             <th>Accciones</th>
                           </tr>
                         </thead>
