@@ -315,6 +315,7 @@
               </p>
             </a>
           </li>
+
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="ml-3 mr-2" data-feather="bookmark"></i>
@@ -326,7 +327,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="roles" class="nav-link">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/NuevaCategoria" class="nav-link">
                    <i class="ml-3 mr-2" data-feather="plus"></i>
 
                   <p>Agregar</p>
@@ -335,13 +336,13 @@
             </ul>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="roles" class="nav-link">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/AdministrarCategorias" class="nav-link">
                    <i class="ml-3 mr-2" data-feather="flag"></i>
-
                   <p>Administrar</p>
                 </a>
               </li>
             </ul>
+
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
@@ -354,7 +355,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="roles" class="nav-link">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/AgregarAutor" class="nav-link">
                    <i class="ml-3 mr-2" data-feather="plus"></i>
 
                   <p>Agregar</p>
@@ -363,7 +364,7 @@
             </ul>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="roles" class="nav-link">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/AdministrarAutores" class="nav-link">
                    <i class="ml-3 mr-2" data-feather="flag"></i>
 
                   <p>Administrar</p>
@@ -382,7 +383,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="roles" class="nav-link">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/AgregarLibros" class="nav-link">
                    <i class="ml-3 mr-2" data-feather="plus"></i>
 
                   <p>Agregar</p>
@@ -391,7 +392,7 @@
             </ul>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="roles" class="nav-link">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/AdministrarLibros" class="nav-link">
                    <i class="ml-3 mr-2" data-feather="flag"></i>
 
                   <p>Administrar</p>
@@ -410,7 +411,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="roles" class="nav-link">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/NuevoPrestamo" class="nav-link">
                    <i class="ml-3 mr-2" data-feather="plus"></i>
 
                   <p>Nuevo Préstamo</p>
@@ -419,7 +420,7 @@
             </ul>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="roles" class="nav-link">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/AdministrarPrestamos" class="nav-link">
                    <i class="ml-3 mr-2" data-feather="flag"></i>
 
                   <p>Administrar</p>
@@ -438,21 +439,21 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="roles" class="nav-link">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/NuevoEstudiante" class="nav-link">
                    <i class="ml-3 mr-2" data-feather="plus"></i>
 
                   <p>Nuevo Estudiante</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="roles" class="nav-link">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/ListaEstudiantes" class="nav-link">
                    <i class="ml-3 mr-2" data-feather="flag"></i>
 
                   <p>Lista de Estudiantes</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="roles" class="nav-link">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/SubirMasivo" class="nav-link">
                    <i class="ml-3 mr-2" data-feather="share"></i>
 
                   <p>Subir Masivo</p>
