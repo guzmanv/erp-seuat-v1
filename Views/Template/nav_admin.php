@@ -461,6 +461,40 @@
               </li>
             </ul>
           </li>
+          <!-- REPORTE DE PLATAFORMAS -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="ml-3 mr-2" data-feather="trello"></i>
+              <!--<i class="nav-icon fas fa-tachometer-alt"></i>-->
+              <p>
+                Reportes - Plataformas
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/NuevoEstudiante" class="nav-link">
+                   <i class="ml-3 mr-2" data-feather="loader"></i>
+
+                  <p>Moodle</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/ListaEstudiantes" class="nav-link">
+                   <i class="ml-3 mr-2" data-feather="life-buoy"></i>
+
+                  <p>Cisco Webex</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/SubirMasivo" class="nav-link">
+                   <i class="ml-3 mr-2" data-feather="video"></i>
+
+                  <p>Google Meet</p>
+                </a>
+              </li>
+            </ul>
+          </li>
 
 
         </ul>
