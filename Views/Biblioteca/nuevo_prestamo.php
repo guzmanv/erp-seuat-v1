@@ -40,23 +40,25 @@
                           <div class="row">
                             <input type="text" class="form-control col-md-8" placeholder="Matricula Interna o Externa">
                             <p class="m-2"> Ó </p>
-                            <button class="btn btn-warning">Buscar Alumno</button>
+                            <button class="btn btn-warning"><i class="fa fa-search"></i> Buscar Alumno</button>
                           </div>
                         </div>
                         <div class="mb-3">
-                          <h4>ISBN o Título del Libro</h4>
-                          <div>
-                            <input type="text" class="form-control" placeholder="ISBN o Título">
+                          <h4>ISBN</h4>
+                          <div class="row">
+                            <input type="text" class="form-control col-md-8" placeholder="ISBN del Libro">
+                            <p class="m-2"> Ó </p>
+                            <button class="btn btn-warning"><i class="fa fa-search"></i> Buscar por Título</button>
                           </div>
                         </div>
-                        <div class="mb-3 form-group">
+                        <div class="mb-3 form-group col-md-5">
                           <div class="form-group">
-                            <label>Date:</label>
+                            <h4>Fecha Devolución:</h4>
                               <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                                  <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
                                   <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
                                       <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                   </div>
+                                  <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
                               </div>
                           </div>
                         </div>
