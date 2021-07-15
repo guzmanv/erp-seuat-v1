@@ -37,7 +37,7 @@
                         <thead>
                           <tr>
                             <th>#</th>
-                            <th>Categoria</th>
+                            <th>Nombre del Autor</th>
                             <th>Creado en:</th>
                             <th>Actualizado en:</th>
                             <th>Acciones</th>

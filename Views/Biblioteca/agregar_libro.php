@@ -34,41 +34,61 @@
                       <h2>Agregar Libro</h2>
                     </div>
                     <div class="card-body">
-                      <form>
+                      <form action="setLibros" method="POST">
                         <div class="mb-3">
                           <h4>Nombre del Libro</h4>
                           <div>
-                            <input type="text" class="form-control" placeholder="Nombre del Libro">
+                            <input type="text" class="form-control" placeholder="Nombre del Libro" name="nombre_libro">
                           </div>
                         </div>
                         <div class="mb-3">
                             <h4>Categoria</h4>
-                            <div>
-                                <input type="text" class="form-control" placeholder="Categoría">
+                            <div class="input-group">
+                              <select class="custom-select" id="inputGroupSelect04" name="nombre_categoria">
+                                <option selected>Selecciona una Categoria</option>
+                                <?php  
+                                  foreach($data['categorias'] as $categoria){
+                                    ?>
+                                      <option value="<?php echo $categoria['id'] ?>"><?php echo($categoria['nombre_categoria_libro']); ?></option>
+                                    <?php
+                                  }      
+
+                                ?>
+                              </select>
                             </div>
                         </div>
                         <div class="mb-3">
                             <h4>Autor</h4>
-                            <div>
-                                <input type="text" class="form-control" placeholder="Autor">
+                            <div class="input-group">
+                              <select class="custom-select" id="inputGroupSelect04" name="nombre_autor">
+                                <option selected>Nombre del Autor</option>
+                                <?php  
+                                  foreach($data['autor'] as $autor){
+                                    ?>
+                                      <option value="<?php echo $autor['id'] ?>"><?php echo($autor['nombre_autor'].' '.$autor['apellido_paterno'].' '.$autor['apellido_materno'] ); ?></option>
+                                    <?php
+                                  }      
+
+                                ?>
+                              </select>
                             </div>
                         </div>
                         <div class="mb-3">
                             <h4>Numero de ISBN</h4>
                             <div>
-                                <input type="text" class="form-control" placeholder="Numero de ISBN">
+                                <input type="text" class="form-control" placeholder="Numero de ISBN" name="isbn">
                             </div>
                         </div>
                         <div class="mb-3">
-                            <h4>DCC</h4>
+                            <h4>DDC</h4>
                             <div>
-                                <input type="text" class="form-control" placeholder="Clasificacion Decimal Dewey">
+                                <input type="text" class="form-control" placeholder="Clasificacion Decimal Dewey" name="dcc">
                             </div>
                         </div>
                         <div class="mb-3">
                             <h4>Cantidad</h4>
                             <div>
-                                <input type="text" class="form-control" placeholder="Cantidad">
+                                <input type="text" class="form-control" placeholder="Cantidad" name="ct">
                             </div>
                         </div>
                         <div class="mb-3 row">

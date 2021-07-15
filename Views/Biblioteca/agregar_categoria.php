@@ -34,24 +34,32 @@
                       <h2>Categoria</h2>
                     </div>
                     <div class="card-body">
-                      <form>
+                      <form action = "setCategoria" method="POST">
                         <div class="mb-3">
                           <h4>Nombre de la Categoría</h4>
                           <div>
-                            <input type="email" class="form-control" placeholder="Nombre de la categoría">
+                            <input type="text" class="form-control" placeholder="Nombre de la categoría" name="nombre_categoria" required title="hola">
                           </div>
+                          <!--
+                          <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="basic-addon1"><i class="fab fa-accessible-icon"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Nombre de la Categoria" name="nombre_categoria" required>
+                          </div>
+                          -->
                         </div>
                         <div class="mb-3 row"></div>
                         <div class="mb-3 row"></div>
                         <div class="mb-3">
                           <h4>Status</h4>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="radio1" checked="">
-                            <label class="form-check-label">Activo</label>
+                            <input class="form-check-input" type="radio" name="radio" id="radio1" value="activo" checked>
+                            <label class="form-check-label" for="radio1">Activo</label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="radio2">
-                            <label class="form-check-label">Innactivo</label>
+                            <input class="form-check-input" type="radio" name="radio" id="radio2" value="innactivo">
+                            <label class="form-check-label" for="radio2">Innactivo</label>
                           </div>
                         </div>
                         <div class="mb-3 row">

@@ -17,6 +17,8 @@
   <!-- DataTables -->
   <link rel="stylesheet" href="<?php echo media(); ?>/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="<?php echo media(); ?>/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="<?php echo media(); ?>/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
 </head>
 
 <?php require_once("nav_admin.php"); ?>

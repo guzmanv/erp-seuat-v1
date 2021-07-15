@@ -16,7 +16,6 @@
     </script>
 
 <!-- REQUIRED SCRIPTS -->
-
 <!-- jQuery -->
 <script src="<?php echo media(); ?>/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
@@ -27,6 +26,10 @@
 <script src="<?php echo media(); ?>/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
 <script src="<?php echo media(); ?>/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 
+<!-- InputMask -->
+<script src="<?php echo media(); ?>/plugins/moment/moment.min.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="<?php echo media(); ?>/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
 <!-- AdminLTE App -->
 <script src="<?php echo media(); ?>/js/adminlte.js"></script>
 
@@ -38,7 +41,8 @@
 
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?= media(); ?>/js/dashboard3.js"></script>
-
+<!--Sweet Alert 2 -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <!--<script type="text/javascript" src="<?= media();?>/js/functions_admin.js"></script>-->
 <script src="<?= media(); ?>/js/<?= $data['page_functions_js']; ?>"></script>
 

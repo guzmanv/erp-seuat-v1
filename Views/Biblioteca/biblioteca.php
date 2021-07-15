@@ -42,7 +42,7 @@
                           </div>
                         </div>
                       </div>
-                      <h1 class="mt-1 mb-3">132</h1>
+                      <h1 class="mt-1 mb-3" id="ct-libros"></h1>
                       <div class="mb-0">
                         <!--<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>-->
                         <span class="text-muted">Titulos Existentes</span>
@@ -66,7 +66,7 @@
                           </div>
                         </div>
                       </div>
-                      <h1 class="mt-1 mb-3">10</h1>
+                      <h1 class="mt-1 mb-3" id="ct-prestamos"></h1>
                       <div class="mb-0">
                         <!--<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>-->
                         <span class="text-muted">Libros Prestados</span>
@@ -90,7 +90,7 @@
                           </div>
                         </div>
                       </div>
-                      <h1 class="mt-1 mb-3">23</h1>
+                      <h1 class="mt-1 mb-3" id="ct-devoluciones"></h1>
                       <div class="mb-0">
                         <!--<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>-->
                         <span class="text-muted">Títulos Devueltos</span>
@@ -114,7 +114,7 @@
                           </div>
                         </div>
                       </div>
-                      <h1 class="mt-1 mb-3">421</h1>
+                      <h1 class="mt-1 mb-3" id="ct-usuarios"></h1>
                       <div class="mb-0">
                         <!--<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>-->
                         <span class="text-muted">Total Usuarios</span>
@@ -138,7 +138,7 @@
                           </div>
                         </div>
                       </div>
-                      <h1 class="mt-1 mb-3">132</h1>
+                      <h1 class="mt-1 mb-3" id="ct-autores"></h1>
                       <div class="mb-0">
                         <!--<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>-->
                         <span class="text-muted">Total Autores</span>
@@ -162,7 +162,7 @@
                           </div>
                         </div>
                       </div>
-                      <h1 class="mt-1 mb-3">132</h1>
+                      <h1 class="mt-1 mb-3" id="ct-categorias"></h1>
                       <div class="mb-0">
                         <!--<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>-->
                         <span class="text-muted">Total Categorías</span>
