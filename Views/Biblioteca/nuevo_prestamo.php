@@ -40,7 +40,7 @@
                           <div class="row">
                             <input type="text" class="form-control col-md-8" placeholder="Matricula Interna o Externa">
                             <p class="m-2"> Ó </p>
-                            <button class="btn btn-warning"><i class="fa fa-search"></i> Buscar Alumno</button>
+                            <button class="btn btn-warning btnBuscarAlumno"><i class="fa fa-search"></i> Buscar Alumno</button>
                           </div>
                         </div>
                         <div class="mb-3">
