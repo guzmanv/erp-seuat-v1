@@ -236,6 +236,15 @@ class Biblioteca extends Controllers
 		echo json_encode($arrData,JSON_UNESCAPED_UNICODE);
 		die();;
 	}
+	function setAnaquel(){
+		$data = $_GET;
+		$arrData = $this->model->insertAnaqueles($data);
+		if($arrData){
+			echo json_encode($arrData,JSON_UNESCAPED_UNICODE);
+			die();
+		}
+	
+	}
 
 }
 ?>

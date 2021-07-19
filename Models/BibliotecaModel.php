@@ -155,9 +155,20 @@
 		}
 
 		public function selectAnaqueles(){
-			$sql = "SELECT *FROM t_anaquel ORDER BY nombre_anaquel ASC";
+			$sql = "SELECT *FROM t_anaquel";
 			$request = $this->select_all($sql);
 			return $request;
+		}
+		public function insertAnaqueles($data){
+			$mensaje = "ok";
+			for ($i = 1; $i<=$data['number']; $i++){
+				$sql = "INSERT INTO t_anaquel(nombre_anaquel,numero_charola,id_usuarios)
+					VALUES (?,?,?)";
+				$request = $this->insert($sql,array($data['name'],$i,1));
+				if($i == $data['number']){
+					return $mensaje;
+				}
+			}
 		}
 	}
 ?>

@@ -10,7 +10,7 @@
         <div class="row mb-2">
           <div class="col-sm-6">
             <h1 class="m-0">  <?= $data['page_title'] ?>
-            <button type="button" class="btn btn-primary btn-sm" onclick="agregarAnaquel()"><i class="fa fa-plus-circle fa-md"></i> Nuevo</button>
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalAnaquel"><i class="fa fa-plus-circle fa-md"></i> Nuevo</button>
             </h1>
           </div>
           <!--
@@ -48,6 +48,30 @@
                         </tbody>
                       </table>
                       </p>
+
+                      <!-- Modal para buscar Matricula del Alumno-->
+                        <div class="modal fade" id="modalAnaquel" tabindex="-1" role="dialog" aria-labelledby="modalAnaquelLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalAnaquelLabel">Agregar Anaquel</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input type="text" class="form-control" id="nombreAnaquel" placeholder="Nombre del Anaquel" maxlength="100" autocomplete="off"/>
+                                        <br>
+                                        <input type="text" class="form-control" id="numeroCharolas" placeholder="Numero de Charolas" maxlength="100" autocomplete="off"/>
+                                        <br>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="agregarAnaquel()">Agregar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                   </div>
                 </div>

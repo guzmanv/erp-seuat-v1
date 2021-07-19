@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	    "scrollY": '42vh',
 	    "scrollCollapse": true,
 	    "bDestroy": true,
-	    "order": [[ 0, "asc" ]],
+	    "order": [[ 1, "asc" ]],
 	    "iDisplayLength": 25
     });
 
@@ -39,3 +39,24 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 $('#tableRoles').DataTable();
+
+//Funcion para nuevo Anaquel
+function agregarAnaquel(){
+	var nombreAnaquel = document.getElementById("nombreAnaquel").value;
+	var numeroCharola = document.getElementById("numeroCharolas").value;
+
+    let url = base_url+"/Biblioteca/setAnaquel?name="+nombreAnaquel+"&"+"number="+numeroCharola;
+        fetch(url)
+            .then(res => res.json())
+            .then((out) => {
+				Swal.fire(
+					'Exito!',
+					'Ha sido agregado el Anaquel.',
+					'success'
+				  ).then((result)=>{
+					location.href= base_url+"/Biblioteca/ubicacion";
+				  })
+            })
+            .catch(err => { throw err });
+
+}
