@@ -153,5 +153,11 @@
 			$request = $this->select_all($sql);
 			return $request;
 		}
+
+		public function selectAnaqueles(){
+			$sql = "SELECT *FROM t_anaquel ORDER BY nombre_anaquel ASC";
+			$request = $this->select_all($sql);
+			return $request;
+		}
 	}
 ?>
