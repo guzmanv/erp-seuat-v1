@@ -29,7 +29,7 @@
           <div class="col-lg-12">
             <div class="card">
               <div class="card-body">
-                <div class="col-12 col-xl-12">
+                <div class="col-8 col-xl-8">
                   <div class="card">
                     <div class="card-body">
                       <h3 class="card-title">Lista de Anaqueles</h3>
