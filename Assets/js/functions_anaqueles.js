@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function(){
             {"data":"id"},
             {"data":"nombre_anaquel"},
 			{"data":"numero_charola"},
+            {"data":"abreviatura"},
 			{"data":"options"}
 
         ],
