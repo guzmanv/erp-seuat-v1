@@ -223,6 +223,18 @@ class Biblioteca extends Controllers
 		$data['page_functions_js'] = "functions_anaqueles.js";
 		$this->views->getView($this,"ubicacion",$data);
 	}
+	function getAnaqueles(){
+		$arrData = $this->model->selectAnaqueles();
+		for ($i=0; $i < count($arrData); $i++) {
+			$arrData[$i]['options'] = '<div class="text-center">
+			<button class="btn btn-secondary btn-sm btnPermisosRol" rl="'.$arrData[$i]['id'].'" title="Permisos"><i class="fas fa-key"></i></button>
+			<button class="btn btn-primary btn-sm btnEditRol" rl="'.$arrData[$i]['id'].'" title="Editar"><i class="fas fa-pencil-alt"></i></button>
+			<button class="btn btn-danger btn-sm btnDelRol" rl="'.$arrData[$i]['id'].'" title="Eliminar"><i class="far fa-trash-alt"></i></button>
+			</div>';
+		}
+		echo json_encode($arrData,JSON_UNESCAPED_UNICODE);
+		die();;
+	}
 
 }
 ?>
