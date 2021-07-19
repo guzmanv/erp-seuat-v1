@@ -428,6 +428,28 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="ml-3 mr-2" data-feather="clipboard"></i>
+              <!--<i class="nav-icon fas fa-tachometer-alt"></i>-->
+              <p>
+                Biblioteca - Ubicacion
+                <i class="right fas fa-angle-left"></i>
+              
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/NuevoPrestamo" class="nav-link">
+                   <i class="ml-3 mr-2" data-feather="flag"></i>
+
+                  <p>Anaqueles</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="ml-3 mr-2" data-feather="users"></i>
