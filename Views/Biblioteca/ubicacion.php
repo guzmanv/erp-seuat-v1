@@ -13,12 +13,13 @@
              <a href="AgregarAutor"><button type="button" class="btn btn-primary btn-sm"><i class="fa fa-plus-circle fa-md"></i> Nuevo</button></a>
             </h1>
           </div>
+          <!--
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><i class="fa fa-home fa-md"></i><a href="#">Home</a></li>
               <li class="breadcrumb-item active"><a href="<?= base_url(); ?>/roles"><?= $data['page_title'] ?></a></li>
             </ol>
-          </div>
+          </div>-->
         </div>
       </div>
     </div>
@@ -37,9 +38,9 @@
                         <thead>
                           <tr>
                             <th>#</th>
-                            <th>Nombre del Autor</th>
-                            <th>Creado en:</th>
-                            <th>Actualizado en:</th>
+                            <th>Nombre Anaquel</th>
+                            <th>Numero de Charola</th>
+                            <th>Abreviatura</th>
                             <th>Acciones</th>
                           </tr>
                         </thead>
