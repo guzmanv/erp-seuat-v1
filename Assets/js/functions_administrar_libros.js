@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function(){
         },
         "columns":[
             {"data":"id"},
-            {"data":"nombre_libro"},
-			{"data":"nombre_categoria_libro"},
+            {"data":"titulo_libro"},
+			{"data":"subtitulo_libro"},
             {"data":"nombre_autor"},
             {"data":"numero_isbn"},
 			{"data":"cantidad"},

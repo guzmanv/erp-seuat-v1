@@ -61,6 +61,7 @@
                             <input class="form-check-input" type="radio" name="radio" id="radio1" value="activo" checked>
                             <label class="form-check-label" for="radio1">Activo</label>
                           </div>
+                          
                           <div class="form-check">
                             <input class="form-check-input" type="radio" name="radio" id="radio2" value="innactivo">
                             <label class="form-check-label" for="radio2">Innactivo</label>

@@ -27,7 +27,7 @@
 
 		public function selectLibros()
 		{
-			$sql = "SELECT lb.id,lb.nombre_libro,catlb.nombre_categoria_libro,CONCAT(autlb.nombre_autor,' ',autlb.apellido_paterno,' ',
+			$sql = "SELECT lb.id,lb.titulo_libro,lb.subtitulo_libro,catlb.nombre_categoria_libro,CONCAT(autlb.nombre_autor,' ',autlb.apellido_paterno,' ',
 			autlb.apellido_materno) AS nombre_autor,lb.numero_isbn,inv.cantidad FROM t_libros AS lb INNER JOIN t_categorias_libros 
 			AS catlb ON lb.id_categorias = catlb.id INNER JOIN t_autores AS autlb ON lb.id_autores = autlb.id
 			INNER JOIN t_inventarios AS inv ON lb.id = inv.id_libros";
@@ -99,10 +99,10 @@
 		}
 		
 		public function insertLibro($data){
-			$sql = "INSERT INTO t_libros (nombre_libro,numero_isbn,anio,clasificacion_dewey,clasificacion_interna,fecha_alta,fecha_actualizacion,
+			$sql = "INSERT INTO t_libros (titulo_libro,subtitulo_libro,numero_isbn,anio,clasificacion_dewey,clasificacion_interna,fecha_alta,fecha_actualizacion,
 					id_categorias,id_autores,id_ediciones,id_editoriales,id_estado_libros,id_personas) 
-					VALUES (?,?,?,?,?,NOW(),NOW(),?,?,?,?,?,?)";
-			$request = $this->insert($sql,array($data['nombre_libro'],$data['isbn'],2021,$data['dcc'],12,$data['nombre_categoria'],
+					VALUES (?,?,?,?,?,?,NOW(),NOW(),?,?,?,?,?,?)";
+			$request = $this->insert($sql,array($data['titulo_libro'],$data['subtitulo_libro'],$data['isbn'],2021,$data['dcc'],12,$data['nombre_categoria'],
 			$data['nombre_autor'],2002,2002,2,1));
 			if($request){
 				$sqlInv = "INSERT INTO t_inventarios(id_libros,cantidad,id_categorias_inventarios,id_personas)

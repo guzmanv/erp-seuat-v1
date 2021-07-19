@@ -37,9 +37,15 @@
                     <div class="card-body">
                       <form action="setLibros" method="POST">
                         <div class="mb-3">
-                          <h4>Nombre del Libro</h4>
+                          <h4>Título del Libro</h4>
                           <div>
-                            <input type="text" class="form-control" placeholder="Nombre del Libro" name="nombre_libro">
+                            <input type="text" class="form-control" placeholder="Nombre del Libro" name="titulo_libro">
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <h4>Subtitulo del Libro</h4>
+                          <div>
+                            <input type="text" class="form-control" placeholder="Subtitulo del Libro" name="subtitulo_libro">
                           </div>
                         </div>
                         <div class="mb-3">
@@ -81,9 +87,31 @@
                             </div>
                         </div>
                         <div class="mb-3">
+                            <h4>Ubicacion</h4>
+                            <div>
+                              <select class="custom-select" id="inputGroupSelect04" name="ubicacion">
+                                <option selected>Ubicacion en los Anaqueles</option>
+                                <?php  
+                                  foreach($data['autor'] as $autor){
+                                    ?>
+                                      <option value="<?php echo $autor['id'] ?>"><?php echo($autor['nombre_autor'].' '.$autor['apellido_paterno'].' '.$autor['apellido_materno'] ); ?></option>
+                                    <?php
+                                  }      
+
+                                ?>
+                              </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
                             <h4>DDC</h4>
                             <div>
                                 <input type="text" class="form-control" placeholder="Clasificacion Decimal Dewey" name="dcc">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <h4>Clasificacion Interna</h4>
+                            <div>
+                                <input type="text" class="form-control" placeholder="Clasificacion Interna" name="clasificacion_interna">
                             </div>
                         </div>
                         <div class="mb-3">

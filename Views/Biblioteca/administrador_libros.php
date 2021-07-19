@@ -37,8 +37,8 @@
                         <thead>
                           <tr>
                             <th>#</th>
-                            <th>Nombre del Libro</th>
-                            <th>Categoría</th>
+                            <th>Título</th>
+                            <th>Subtitulo</th>
                             <th>Autor</th>
                             <th>ISBN</th>
                             <th>Cantidad</th>
