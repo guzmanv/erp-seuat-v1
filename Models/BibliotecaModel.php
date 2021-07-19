@@ -37,16 +37,17 @@
 
 		public function selectPrestamos()
 		{
-			$sql = "SELECT * FROM t_prestamo_libros INNER JOIN t_estudiante ON t_prestamo_libros.alumnoId = t_estudiante.id 
-			INNER JOIN t_libros ON t_prestamo_libros.libroId = t_libros.id";
+			$sql = "SELECT pr.id,pr.fecha_devolucion,pr.fecha_prestamo,t_libros.numero_isbn,t_libros.nombre_libro,CONCAT(
+				v_alumnos_matriculas.nombre_persona,' ',v_alumnos_matriculas.ap_paterno,' ',v_alumnos_matriculas.ap_materno) AS nombre_estudiante FROM t_prestamo_libros AS pr
+				INNER JOIN v_alumnos_matriculas ON pr.id_alumnos = v_alumnos_matriculas.id
+				INNER JOIN t_libros ON pr.id_libros = t_libros.id";
 			$request = $this->select_all($sql);
 			return $request;
 		}
 
 		public function selectEstudiantes()
 		{
-			//Extraer Roles
-			$sql = "SELECT * FROM estudiante";
+			$sql = "SELECT * FROM v_alumnos_matriculas";
 			$request = $this->select_all($sql);
 			return $request;
 		}
@@ -58,7 +59,7 @@
 			$sql_prestamos = "SELECT COUNT(id) AS id FROM t_prestamo_libros";
 			$req_prestamos = $this->select_all($sql_prestamos);
 			$data['req_prestamos'] = $req_prestamos[0]['id'];
-			$sql_devoluciones = "SELECT COUNT(id) AS id FROM t_prestamo_libros";
+			$sql_devoluciones = "SELECT COUNT(id) AS id FROM t_prestamo_libros WHERE estatus_devolucion = 1";
 			$req_devoluciones = $this->select_all($sql_devoluciones);
 			$data['req_devoluciones'] = $req_devoluciones[0]['id'];
 			$sql_usuarios = "SELECT COUNT(id) AS id FROM t_personas";
@@ -108,6 +109,48 @@
 							VALUES (?,?,?,?)";
 				$requestInv = $this->insert($sqlInv,array($request,$data['ct'],1,1));
 			}
+			return $request;
+		}
+		/* Nuevo Prestamo */
+		public function insertPrestamo($data){
+			$isbn = $data['isbn'];
+			$matricula = $data['matricula'];
+			$dateDevoluicion = $data['date'];
+
+			$sqlISBN = "SELECT id FROM t_libros WHERE numero_isbn = $isbn";
+			$requestISBN = $this->select_all($sqlISBN);
+			$idLibro = $requestISBN[0]['id'];
+
+			$sqlMatricula = "SELECT id FROM v_alumnos_matriculas WHERE mat_externa = $matricula";
+			$requestMatricula = $this->select_all($sqlMatricula);
+			$idAlumno = $requestMatricula[0]['id'];
+			
+			$sql = "INSERT INTO t_prestamo_libros(fecha_prestamo,fecha_devolucion,estatus_devolucion,comentarios,id_libros,
+					id_alumnos,id_tipo_prestamo_libros,id_personas) VALUES (NOW(),NOW(),?,?,?,?,?,?)";
+			$request = $this->insert($sql,array(0,'sin comentarios',$idLibro,$idAlumno,1,1));
+			return $request;
+		}
+
+		/*Modal buscar Estudiante*/
+		public function selectEstudianteModal($data)
+		{	
+			//$sql = "SELECT id,matricula,CONCAT(nombre_estudiante,' ',apellidos_paterno,' ',apellidos_materno) AS nombre_estudiante FROM t_personas_d WHERE CONCAT(nombre_estudiante,' ',apellidos_paterno,' ',
+			//		apellidos_materno) LIKE '%$data%'";
+			$sql = "SELECT id,mat_externa,mat_interna,CONCAT(nombre_persona,' ',ap_paterno,' ',ap_materno)
+					 AS nombre_estudiante FROM v_alumnos_matriculas 
+					WHERE CONCAT(nombre_persona,' ',ap_paterno,' ',ap_materno)
+					LIKE '%$data%'";
+			$request = $this->select_all($sql);
+			return $request;
+
+		}
+		/*Modal buscar ISBN del Libro*/
+		public function selectLibroModal($data)
+		{	
+			$sql = "SELECT lb.id,lb.nombre_libro,lb.numero_isbn,CONCAT(aut.nombre_autor,' ',aut.apellido_paterno,' ',aut.apellido_materno) AS nombre_autor FROM t_libros AS lb
+			INNER JOIN t_autores AS aut ON lb.id_autores = aut.id
+			WHERE lb.nombre_libro LIKE '%$data%'";
+			$request = $this->select_all($sql);
 			return $request;
 		}
 	}

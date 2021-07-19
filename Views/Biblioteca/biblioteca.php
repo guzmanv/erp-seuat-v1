@@ -42,7 +42,7 @@
                           </div>
                         </div>
                       </div>
-                      <h1 class="mt-1 mb-3" id="ct-libros"></h1>
+                      <h1 class="mt-1 mb-3 font-weight-bold" id="ct-libros"></h1>
                       <div class="mb-0">
                         <!--<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>-->
                         <span class="text-muted">Titulos Existentes</span>
@@ -66,7 +66,7 @@
                           </div>
                         </div>
                       </div>
-                      <h1 class="mt-1 mb-3" id="ct-prestamos"></h1>
+                      <h1 class="mt-1 mb-3 font-weight-bold" id="ct-prestamos"></h1>
                       <div class="mb-0">
                         <!--<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>-->
                         <span class="text-muted">Libros Prestados</span>
@@ -90,7 +90,7 @@
                           </div>
                         </div>
                       </div>
-                      <h1 class="mt-1 mb-3" id="ct-devoluciones"></h1>
+                      <h1 class="mt-1 mb-3 font-weight-bold" id="ct-devoluciones"></h1>
                       <div class="mb-0">
                         <!--<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>-->
                         <span class="text-muted">Títulos Devueltos</span>
@@ -104,7 +104,7 @@
                     <div class="card-body">
                       <div class="row">
                         <div class="col mt-0">
-                          <h5 class="card-title">Usuarios</h5>
+                          <h5 class="card-title">Alumnos</h5>
                         </div>
                         <div class="col-auto">
                           <div class="avatar">
@@ -114,10 +114,10 @@
                           </div>
                         </div>
                       </div>
-                      <h1 class="mt-1 mb-3" id="ct-usuarios"></h1>
+                      <h1 class="mt-1 mb-3 font-weight-bold" id="ct-usuarios"></h1>
                       <div class="mb-0">
                         <!--<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>-->
-                        <span class="text-muted">Total Usuarios</span>
+                        <span class="text-muted">Total Alumnos</span>
                       </div>
                     </div>
                   </div>
@@ -138,7 +138,7 @@
                           </div>
                         </div>
                       </div>
-                      <h1 class="mt-1 mb-3" id="ct-autores"></h1>
+                      <h1 class="mt-1 mb-3 font-weight-bold" id="ct-autores"></h1>
                       <div class="mb-0">
                         <!--<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>-->
                         <span class="text-muted">Total Autores</span>
@@ -162,7 +162,7 @@
                           </div>
                         </div>
                       </div>
-                      <h1 class="mt-1 mb-3" id="ct-categorias"></h1>
+                      <h1 class="mt-1 mb-3 font-weight-bold" id="ct-categorias"></h1>
                       <div class="mb-0">
                         <!--<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>-->
                         <span class="text-muted">Total Categorías</span>

@@ -82,14 +82,6 @@ class Biblioteca extends Controllers
 		$data['page_functions_js'] = "functions_administrar_prestamos.js";
 		$this->views->getView($this,"administrador_prestamos",$data);
 	}
-	public function NuevoEstudiante(){
-		$data['page_id'] = 3;
-		$data['page_tag'] = "Biblioteca";
-		$data['page_name'] = "biblioteca";
-		$data['page_title'] = "Nuevo Estudiante";
-		$data['page_functions_js'] = "functions_biblioteca.js";
-		$this->views->getView($this,"nuevo_estudiante",$data);
-	}
 	public function ListaEstudiantes(){
 		$data['page_id'] = 3;
 		$data['page_tag'] = "Biblioteca";
@@ -97,14 +89,6 @@ class Biblioteca extends Controllers
 		$data['page_title'] = "Administrar Estudiantes";
 		$data['page_functions_js'] = "functions_lista_estudiantes.js";
 		$this->views->getView($this,"administrador_estudiante",$data);
-	}
-	public function SubirMasivo(){
-		$data['page_id'] = 3;
-		$data['page_tag'] = "Biblioteca";
-		$data['page_name'] = "biblioteca";
-		$data['page_title'] = "Subir Masivo";
-		$data['page_functions_js'] = "functions_biblioteca.js";
-		$this->views->getView($this,"masivo_estudiante",$data);
 	}
 	public function getCategorias(){
 		$arrData = $this->model->selectCategorias();
@@ -165,12 +149,9 @@ class Biblioteca extends Controllers
 	public function getEstudiantes(){
 		$arrData = $this->model->selectEstudiantes();
 			for ($i=0; $i < count($arrData); $i++) {
-				if($arrData[$i]['status'] == 1)
-				{
-					$arrData[$i]['status'] = '<span class="badge badge-success">Activo</span>';
-				}else{
-					$arrData[$i]['status'] = '<span class="badge badge-danger">Inactivo</span>';
-				}
+				
+				$arrData[$i]['status'] = '<span class="badge badge-success">Activo</span>';
+				
 				$arrData[$i]['options'] = '<div class="text-center">
 				<button class="btn btn-secondary btn-sm btnPermisosRol" rl="'.$arrData[$i]['id'].'" title="Permisos"><i class="fas fa-key"></i></button>
 				<button class="btn btn-primary btn-sm btnEditRol" rl="'.$arrData[$i]['id'].'" title="Editar"><i class="fas fa-pencil-alt"></i></button>
@@ -204,5 +185,35 @@ class Biblioteca extends Controllers
 		if($request)
 			header("Location:".BASE_URL."/Biblioteca/AgregarLibros?mssg=ok");
 	}
+	public function setPrestamos(){
+		$data = $_POST;
+		$request = $this->model->insertPrestamo($data);
+		if($request)
+			header("Location:".BASE_URL."/Biblioteca/NuevoPrestamo?mssg=ok");
+	}
+	/*Modal */
+	function buscarNombreAlumnoModal(){
+		$data = $_GET['val'];
+		$arrData = $this->model->selectEstudianteModal($data);
+		for ($i=0; $i < count($arrData); $i++) {
+			$arrData[$i]['options'] = '<button type="button"  id="'.$arrData[$i]['mat_externa'].'" class="btn btn-primary" onclick="seleccionarAlumno(this)">Seleccionar</button>';
+
+		}
+		echo json_encode($arrData,JSON_UNESCAPED_UNICODE);
+		die();;
+
+	}
+	function buscarISBNModal(){
+		$data = $_GET['val'];
+		$arrData = $this->model->selectLibroModal($data);
+		for ($i=0; $i < count($arrData); $i++) {
+			$arrData[$i]['options'] = '<button type="button" id="'.$arrData[$i]['id'].'"  isbn="'.$arrData[$i]['numero_isbn'].'" class="btn btn-primary" onclick="seleccionarLibro(this)">Seleccionar</button>';
+
+		}
+		echo json_encode($arrData,JSON_UNESCAPED_UNICODE);
+		die();;
+
+	}
+
 }
 ?>

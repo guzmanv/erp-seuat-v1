@@ -15,11 +15,11 @@ document.addEventListener('DOMContentLoaded', function(){
         },
         "columns":[
             {"data":"id"},
-            {"data":"estudianteId"},
-			{"data":"nombreCompletoAlumno"},
+            {"data":"mat_externa"},
+			{"data":"nombre_persona"},
             {"data":"email"},
-            {"data":"numeroTelefono"},
-			{"data":"registroDate"},
+            {"data":"tel_celular"},
+			{"data":"fecha_inscripcion"},
 			{"data":"status"},
 			{"data":"options"}
 

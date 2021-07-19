@@ -438,13 +438,13 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="<?php echo BASE_URL; ?>/Biblioteca/NuevoEstudiante" class="nav-link">
+              <!--<li class="nav-item">
+                <a href="<?php //echo BASE_URL; ?>/Biblioteca/NuevoEstudiante" class="nav-link">
                    <i class="ml-3 mr-2" data-feather="plus"></i>
 
                   <p>Nuevo Estudiante</p>
                 </a>
-              </li>
+              </li>-->
               <li class="nav-item">
                 <a href="<?php echo BASE_URL; ?>/Biblioteca/ListaEstudiantes" class="nav-link">
                    <i class="ml-3 mr-2" data-feather="flag"></i>
@@ -452,13 +452,14 @@
                   <p>Lista de Estudiantes</p>
                 </a>
               </li>
+              <!--
               <li class="nav-item">
-                <a href="<?php echo BASE_URL; ?>/Biblioteca/SubirMasivo" class="nav-link">
+                <a href="<?php //echo BASE_URL; ?>/Biblioteca/SubirMasivo" class="nav-link">
                    <i class="ml-3 mr-2" data-feather="share"></i>
 
                   <p>Subir Masivo</p>
                 </a>
-              </li>
+              </li>-->
             </ul>
           </li>
           <!-- REPORTE DE PLATAFORMAS -->

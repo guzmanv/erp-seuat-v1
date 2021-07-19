@@ -15,11 +15,11 @@ document.addEventListener('DOMContentLoaded', function(){
         },
         "columns":[
             {"data":"id"},
-            {"data":"nombreCompletoAlumno"},
-			{"data":"nombreLibro"},
-            {"data":"ISB"},
-            {"data":"prestamoDate"},
-			{"data":"devolucionDate"},
+            {"data":"nombre_estudiante"},
+			{"data":"nombre_libro"},
+            {"data":"numero_isbn"},
+            {"data":"fecha_prestamo"},
+			{"data":"fecha_devolucion"},
 			{"data":"options"}
 
         ],
