@@ -214,6 +214,15 @@ class Biblioteca extends Controllers
 		die();;
 
 	}
+	public function ubicacion()
+	{
+		$data['page_id'] = 3;
+		$data['page_tag'] = "Ubicacion";
+		$data['page_name'] = "Anaqueles";
+		$data['page_title'] = "Anaqueles";
+		$data['page_functions_js'] = "functions_anaqueles.js";
+		$this->views->getView($this,"ubicacion",$data);
+	}
 
 }
 ?>
