@@ -1,10 +1,10 @@
 <body class="hold-transition sidebar-mini">
-      <div id="divLoading" >
+    <div id="divLoading" >
       <div>
         <img src="<?= media(); ?>/images/loading.svg" alt="Loading">
       </div>
     </div>
-    
+
 <div class="wrapper">
 
   <!-- Navbar -->
@@ -310,9 +310,203 @@
               </li>
             </ul>
           </li>
+
+          <!--BIBLIOTECA-->
+          <li class="nav-item">
+            <a href="Biblioteca" class="nav-link">
+              <i class="ml-3 mr-2" data-feather="grid"></i>
+              <!--<i class="nav-icon fas fa-university"></i>-->
+              <p>
+              Biblioteca - Dashborad
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="ml-3 mr-2" data-feather="bookmark"></i>
+              <!--<i class="nav-icon fas fa-tachometer-alt"></i>-->
+              <p>
+                Biblioteca - Categorias
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/NuevaCategoria" class="nav-link">
+                   <i class="ml-3 mr-2" data-feather="plus"></i>
+
+                  <p>Agregar</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/AdministrarCategorias" class="nav-link">
+                   <i class="ml-3 mr-2" data-feather="flag"></i>
+                  <p>Administrar</p>
+                </a>
+              </li>
+            </ul>
+
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="ml-3 mr-2" data-feather="aperture"></i>
+              <!--<i class="nav-icon fas fa-tachometer-alt"></i>-->
+              <p>
+                Biblioteca - Autores
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/AgregarAutor" class="nav-link">
+                   <i class="ml-3 mr-2" data-feather="plus"></i>
+
+                  <p>Agregar</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/AdministrarAutores" class="nav-link">
+                   <i class="ml-3 mr-2" data-feather="flag"></i>
+
+                  <p>Administrar</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="ml-3 mr-2" data-feather="book"></i>
+              <!--<i class="nav-icon fas fa-tachometer-alt"></i>-->
+              <p>
+                Biblioteca - Libros
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/AgregarLibros" class="nav-link">
+                   <i class="ml-3 mr-2" data-feather="plus"></i>
+
+                  <p>Agregar</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/AdministrarLibros" class="nav-link">
+                   <i class="ml-3 mr-2" data-feather="flag"></i>
+
+                  <p>Administrar</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="ml-3 mr-2" data-feather="book-open"></i>
+              <!--<i class="nav-icon fas fa-tachometer-alt"></i>-->
+              <p>
+                Biblioteca - Prestamos
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/NuevoPrestamo" class="nav-link">
+                   <i class="ml-3 mr-2" data-feather="plus"></i>
+
+                  <p>Nuevo Préstamo</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/AdministrarPrestamos" class="nav-link">
+                   <i class="ml-3 mr-2" data-feather="flag"></i>
+
+                  <p>Administrar</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="ml-3 mr-2" data-feather="users"></i>
+              <!--<i class="nav-icon fas fa-tachometer-alt"></i>-->
+              <p>
+                Biblioteca - Estudiantes
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/NuevoEstudiante" class="nav-link">
+                   <i class="ml-3 mr-2" data-feather="plus"></i>
+
+                  <p>Nuevo Estudiante</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/ListaEstudiantes" class="nav-link">
+                   <i class="ml-3 mr-2" data-feather="flag"></i>
+
+                  <p>Lista de Estudiantes</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/SubirMasivo" class="nav-link">
+                   <i class="ml-3 mr-2" data-feather="share"></i>
+
+                  <p>Subir Masivo</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- REPORTE DE PLATAFORMAS -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="ml-3 mr-2" data-feather="trello"></i>
+              <!--<i class="nav-icon fas fa-tachometer-alt"></i>-->
+              <p>
+                Reportes - Plataformas
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/NuevoEstudiante" class="nav-link">
+                   <i class="ml-3 mr-2" data-feather="loader"></i>
+
+                  <p>Moodle</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/ListaEstudiantes" class="nav-link">
+                   <i class="ml-3 mr-2" data-feather="life-buoy"></i>
+
+                  <p>Cisco Webex</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/SubirMasivo" class="nav-link">
+                   <i class="ml-3 mr-2" data-feather="video"></i>
+
+                  <p>Google Meet</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
+>>>>>>> fdbb7049850718c92844a7f76c86826a243651e0
   </aside>
