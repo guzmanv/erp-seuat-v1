@@ -414,10 +414,10 @@
 
 .swal2-styled.swal2-confirm {
     min-width: 150px;
-    padding: .75rem 1.5rem;
+    padding: .50rem 1.5rem; /*.75rem 1.5rem;*/
     font-size: 1.25rem;
     /*webkit-border-radius: 25rem;*/
-    border-radius: 25rem;
+   /* border-radius: 25rem;*/
     margin: 0 1rem 17px;
 
     border: 0;
@@ -426,6 +426,7 @@
     background-color: #00a8ff;
     /*background-color: #2778c4;*/
     color: #fff;
+    font-size: 1.035em;
     /*font-size: 1.0625em*/
 }
 
@@ -440,19 +441,21 @@
 
 .swal2-styled.swal2-cancel {
     min-width: 150px;
-    padding: .75rem 1.5rem;
+    padding: .50rem 1.5rem; /*.75rem 1.5rem;*/
     font-size: 1.25rem;
     /*webkit-border-radius: 25rem;*/
-    border-radius: 25rem;
+    /*border-radius: 25rem;*/
     margin: 0 1rem 17px;
     font-size: 1.25rem;
 
     border: 0;
     /*border-radius: .25em;*/
+    /*border-radius: .25em;*/
     background: initial;
     background-color: #adb7be;
     /*background-color: #757575;*/
     color: #fff;
+    font-size: 1.035em;
     /*font-size: 1.0625em*/
 }
 
