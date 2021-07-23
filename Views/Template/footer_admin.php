@@ -27,17 +27,20 @@
 <script src="<?php echo media(); ?>/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
 <script src="<?php echo media(); ?>/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 
+<!-- SweetAlert2 -->
+<script src="<?= media(); ?>/plugins/sweetalert2/sweetalert2.min.js"></script>
+<!-- Toastr -->
+<script src="<?php echo media(); ?>/plugins/toastr/toastr.min.js"></script>
 <!-- AdminLTE App -->
 <script src="<?php echo media(); ?>/js/adminlte.js"></script>
-
 <!-- Iconos -->
 <script src="<?php echo media(); ?>/js/app.js"></script>
 
 <!-- OPTIONAL SCRIPTS -->
-<script src="<?= media(); ?>/plugins/chart.js/Chart.min.js"></script>
+<!--<script src="<?= media(); ?>/plugins/chart.js/Chart.min.js"></script>-->
 
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="<?= media(); ?>/js/dashboard3.js"></script>
+<!--<script src="<?= media(); ?>/js/dashboard3.js"></script>-->
 
 <!--<script type="text/javascript" src="<?= media();?>/js/functions_admin.js"></script>-->
 <script src="<?= media(); ?>/js/<?= $data['page_functions_js']; ?>"></script>

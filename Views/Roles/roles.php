@@ -1,5 +1,6 @@
 <?php
   headerAdmin($data);
+  getModal('modalRoles',$data);
 ?>
 
 <div id="contentAjax"></div>
@@ -12,21 +13,23 @@
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
-          <div class="col-sm-6">
+          <div class="col-sm-7">
             <h1 class="m-0">  <?= $data['page_title'] ?>
-              <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-plus-circle fa-md"></i> Nuevo</button>
+              
             </h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><i class="fa fa-home fa-md"></i><a href="#">Home</a></li>
-              <li class="breadcrumb-item active"><a href="<?= base_url(); ?>/roles"><?= $data['page_title'] ?></a></li>
+          </div>
+          <div class="col-sm-5">
+            <ol class="breadcrumb float-sm-right btn-block">
+            <button type="button" onclick="openModal();" class="btn btn-inline btn-primary btn-sm btn-block" data-toggle="modal" data-target="#ModalFormRol"><i class="fa fa-plus-circle fa-md"></i> Nuevo</button>
+              <!--<li class="breadcrumb-item"><i class="fa fa-home fa-md"></i><a href="#">Home</a></li>
+              <li class="breadcrumb-item active"><a href="<?= base_url(); ?>/roles"><?= $data['page_title'] ?></a></li>-->
             </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
+          </div>
+        </div>
+      </div>
     </div>
     <!-- /.content-header -->
+
 
     <!-- Main content -->
     <div class="content">
@@ -39,15 +42,14 @@
               <div class="card-body">
                 <h3 class="card-title">Listado de roles</h3>
                 <p class="card-text">
-              <!-- /.card-header -->
-                <table id="tableRoles" class="table table-bordered table-striped table-sm">
+                <table id="tableRoles" class="table table-bordered table-striped table-hover table-sm">
                   <thead>
                   <tr>
-                    <th>ID</th>
+                    <th width="7%">ID</th>
                     <th>Nombre</th>
                     <th>Descripción</th>
-                    <th>Estatus</th>
-                    <th>Acciones</th>
+                    <th width="8%">Estatus</th>
+                    <th width="17%">Acciones</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -57,45 +59,14 @@
                 </table>
               </p>
               </div>
-              <!-- /.card-body -->
             </div>
 
 
-<!--
-            <div class="card shadow-sm p-3 mb-5 bg-white rounded">
-              <div class="card-body">
-                <h5 class="card-title">Planteles</h5>
 
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the card's
-                  content.
-                </p>
-
-                <a href="#" class="card-link">link uno</a>
-                <a href="#" class="card-link">link dos</a>
-              </div>
-            </div>-->
-
-
-          <!-- /.card -->
+  
           </div>
-          <!-- /.col-md-6 -->
-       <!--   <div class="col-lg-12">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="m-0">Featured</h5>
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">Special title treatment</h6>
-
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>-->
-          <!-- /.col-md-6 -->
+          
         </div>
-        <!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content -->

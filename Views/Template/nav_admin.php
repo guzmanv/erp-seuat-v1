@@ -1,4 +1,10 @@
 <body class="hold-transition sidebar-mini">
+      <div id="divLoading" >
+      <div>
+        <img src="<?= media(); ?>/images/loading.svg" alt="Loading">
+      </div>
+    </div>
+    
 <div class="wrapper">
 
   <!-- Navbar -->
