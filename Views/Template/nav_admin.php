@@ -155,7 +155,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="#" class="brand-link">
       <!--<img src="<?php echo media(); ?>/images/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">-->
       <span class="brand-text font-weight-light">ERP SEUAT</span>
     </a>
@@ -231,7 +231,6 @@
               <!--<i class="nav-icon fas fa-university"></i>-->
               <p>
                 Planteles
-                <span class="right badge bg-primary">Nuevo</span>
               </p>
             </a>
           </li>
@@ -240,7 +239,6 @@
               <i class="ml-3 mr-2" data-feather="layers"></i>
               <p>
                 Plan de estudios
-                <span class="right badge badge-danger">Nuevo</span>
               </p>
             </a>
           </li>
@@ -286,7 +284,39 @@
               <li class="nav-item">
                 <a href="roles" class="nav-link">
                    <i class="ml-3 mr-2" data-feather="circle"></i>
+                  <p>Conceptos</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="roles" class="nav-link">
+                   <i class="ml-3 mr-2" data-feather="circle"></i>
+                  <p>Becas</p>
+                </a>
+              </li>
+              <li class="nav-header">Reportes</li>
+              <li class="nav-item">
+                <a href="plantel" class="nav-link">
+                  <i class="ml-3 mr-2" data-feather="printer"></i>
+                  <p>
+                    Adeudos
+                    <span class="right badge bg-primary">Pdf</span>
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="plantel" class="nav-link">
+                  <i class="ml-3 mr-2" data-feather="printer"></i>
+                  <p>
+                    Ingresos
+                    <span class="right badge bg-primary">Pdf</span>
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="roles" class="nav-link">
+                   <i class="ml-3 mr-2" data-feather="printer"></i>
                   <p>Consultas</p>
+                  <span class="right badge bg-primary">Pdf</span>
                 </a>
               </li>
             </ul>
