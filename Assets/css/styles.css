@@ -136,6 +136,14 @@ label:not(.form-check-label):not(.custom-file-label) {
     color: #FFF;
 }*/
 
+
+.nav-header {
+    background: transparent !important;
+    padding: 1.5rem 1.5rem .375rem !important;
+    font-size: .75rem !important;
+    color: #ced4da !important;
+}
+
 .notBlock {
     display: none;
 }
