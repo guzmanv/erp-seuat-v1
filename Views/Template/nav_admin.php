@@ -16,7 +16,7 @@
       </li>
       <!--
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Home</a>
       </li>-->
     </ul>
 
@@ -508,5 +508,4 @@
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
->>>>>>> fdbb7049850718c92844a7f76c86826a243651e0
   </aside>
