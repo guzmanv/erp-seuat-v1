@@ -10,10 +10,10 @@
 			$controller->{$method}($params);
 		}else{
 			echo "No existe el método";
-			//require_once("controllers/Error.php");
+			//require_once("Controllers/Error.php");
 		}
 	}else{
-		//require_once("controllers/Error.php");
+		//require_once("Controllers/Error.php");
 		echo "No existe controlador";
 	}
 ?>
