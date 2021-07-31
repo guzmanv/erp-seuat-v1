@@ -20,4 +20,5 @@
   <link rel="stylesheet" href="<?= media(); ?>/plugins/sweetalert2/sweetalert2.min.css" type="text/css">
 </head>
 
+
 <?php require_once("nav_admin.php"); ?>

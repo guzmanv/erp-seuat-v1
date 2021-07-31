@@ -434,6 +434,28 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="ml-3 mr-2" data-feather="clipboard"></i>
+              <!--<i class="nav-icon fas fa-tachometer-alt"></i>-->
+              <p>
+                Biblioteca - Ubicacion
+                <i class="right fas fa-angle-left"></i>
+              
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo BASE_URL; ?>/Biblioteca/ubicacion" class="nav-link">
+                   <i class="ml-3 mr-2" data-feather="flag"></i>
+
+                  <p>Anaqueles</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="ml-3 mr-2" data-feather="users"></i>
@@ -444,13 +466,13 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="<?php echo BASE_URL; ?>/Biblioteca/NuevoEstudiante" class="nav-link">
+              <!--<li class="nav-item">
+                <a href="<?php //echo BASE_URL; ?>/Biblioteca/NuevoEstudiante" class="nav-link">
                    <i class="ml-3 mr-2" data-feather="plus"></i>
 
                   <p>Nuevo Estudiante</p>
                 </a>
-              </li>
+              </li>-->
               <li class="nav-item">
                 <a href="<?php echo BASE_URL; ?>/Biblioteca/ListaEstudiantes" class="nav-link">
                    <i class="ml-3 mr-2" data-feather="flag"></i>
@@ -458,13 +480,14 @@
                   <p>Lista de Estudiantes</p>
                 </a>
               </li>
+              <!--
               <li class="nav-item">
-                <a href="<?php echo BASE_URL; ?>/Biblioteca/SubirMasivo" class="nav-link">
+                <a href="<?php //echo BASE_URL; ?>/Biblioteca/SubirMasivo" class="nav-link">
                    <i class="ml-3 mr-2" data-feather="share"></i>
 
                   <p>Subir Masivo</p>
                 </a>
-              </li>
+              </li>-->
             </ul>
           </li>
           <!-- REPORTE DE PLATAFORMAS -->
@@ -479,21 +502,21 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?php echo BASE_URL; ?>/Biblioteca/NuevoEstudiante" class="nav-link">
+                <a href="<?php echo BASE_URL; ?>/ReportesPlataformas/Moodle" class="nav-link">
                    <i class="ml-3 mr-2" data-feather="loader"></i>
 
                   <p>Moodle</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo BASE_URL; ?>/Biblioteca/ListaEstudiantes" class="nav-link">
+                <a href="<?php echo BASE_URL; ?>/ReportesPlataformas/Webex" class="nav-link">
                    <i class="ml-3 mr-2" data-feather="life-buoy"></i>
 
                   <p>Cisco Webex</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo BASE_URL; ?>/Biblioteca/SubirMasivo" class="nav-link">
+                <a href="<?php echo BASE_URL; ?>/ReportesPlataformas/Meet" class="nav-link">
                    <i class="ml-3 mr-2" data-feather="video"></i>
 
                   <p>Google Meet</p>

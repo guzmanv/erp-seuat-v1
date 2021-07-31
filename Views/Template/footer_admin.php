@@ -47,4 +47,3 @@
 
 <!--<p>Framework v1.0 Para ERP Azteca- <a href="https://seuat.mx">www.seuat.mx</p>-->
 </body>
-</html>

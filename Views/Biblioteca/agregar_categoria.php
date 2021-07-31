@@ -71,4 +71,3 @@
     </div>
   </div>
 </div>
-<?php footerAdmin($data); ?>
