@@ -37,7 +37,7 @@
 
 		public function selectPrestamos()
 		{
-			$sql = "SELECT pr.id,pr.fecha_devolucion,pr.fecha_prestamo,t_libros.numero_isbn,t_libros.nombre_libro,CONCAT(
+			$sql = "SELECT pr.id,pr.fecha_devolucion,pr.fecha_prestamo,t_libros.numero_isbn,t_libros.titulo_libro,CONCAT(
 				v_alumnos_matriculas.nombre_persona,' ',v_alumnos_matriculas.ap_paterno,' ',v_alumnos_matriculas.ap_materno) AS nombre_estudiante FROM t_prestamo_libros AS pr
 				INNER JOIN v_alumnos_matriculas ON pr.id_alumnos = v_alumnos_matriculas.id
 				INNER JOIN t_libros ON pr.id_libros = t_libros.id";
@@ -100,10 +100,10 @@
 		
 		public function insertLibro($data){
 			$sql = "INSERT INTO t_libros (titulo_libro,subtitulo_libro,numero_isbn,anio,clasificacion_dewey,clasificacion_interna,fecha_alta,fecha_actualizacion,
-					id_categorias,id_autores,id_ediciones,id_editoriales,id_estado_libros,id_personas) 
+					id_categorias,id_autores,id_formatos,id_editoriales,id_estado_libros,id_personas) 
 					VALUES (?,?,?,?,?,?,NOW(),NOW(),?,?,?,?,?,?)";
-			$request = $this->insert($sql,array($data['titulo_libro'],$data['subtitulo_libro'],$data['isbn'],2021,$data['dcc'],12,$data['nombre_categoria'],
-			$data['nombre_autor'],2002,2002,2,1));
+			$request = $this->insert($sql,array($data['titulo_libro'],$data['subtitulo_libro'],$data['isbn'],$data['anio'],$data['dcc'],$data['clasificacion_interna'],$data['nombre_categoria'],
+			$data['nombre_autor'],$data['formato'],$data['editorial'],$data['estado'],1));
 			if($request){
 				$sqlInv = "INSERT INTO t_inventarios(id_libros,cantidad,id_categorias_inventarios,id_personas)
 							VALUES (?,?,?,?)";
@@ -147,15 +147,32 @@
 		/*Modal buscar ISBN del Libro*/
 		public function selectLibroModal($data)
 		{	
-			$sql = "SELECT lb.id,lb.nombre_libro,lb.numero_isbn,CONCAT(aut.nombre_autor,' ',aut.apellido_paterno,' ',aut.apellido_materno) AS nombre_autor FROM t_libros AS lb
+			$sql = "SELECT lb.id,lb.titulo_libro,lb.numero_isbn,CONCAT(aut.nombre_autor,' ',aut.apellido_paterno,' ',aut.apellido_materno) AS nombre_autor FROM t_libros AS lb
 			INNER JOIN t_autores AS aut ON lb.id_autores = aut.id
-			WHERE lb.nombre_libro LIKE '%$data%'";
+			WHERE lb.titulo_libro LIKE '%$data%'";
 			$request = $this->select_all($sql);
 			return $request;
 		}
 
 		public function selectAnaqueles(){
-			$sql = "SELECT *FROM t_anaquel";
+			$sql = "SELECT *FROM t_anaquel ORDER BY numero_charola ASC";
+			$request = $this->select_all($sql);
+			return $request;
+		}
+
+		public function selectFormatos(){
+			$sql = "SELECT *FROM t_formatos";
+			$request = $this->select_all($sql);
+			return $request;
+		}
+
+		public function selectEditorial(){
+			$sql = "SELECT *FROM t_editoriales";
+			$request = $this->select_all($sql);
+			return $request;
+		}
+		public function selectEstados(){
+			$sql = "SELECT *FROM t_estado_libros";
 			$request = $this->select_all($sql);
 			return $request;
 		}

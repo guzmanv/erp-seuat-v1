@@ -9,3 +9,8 @@ if(message == "ok"){
         location.href =base_url+"/Biblioteca/AdministrarLibros";
       })
 }
+
+console.log("llamando funcion");
+function changeFunc(answer){
+  console.log(answer);
+}

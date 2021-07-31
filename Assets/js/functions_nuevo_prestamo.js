@@ -61,7 +61,7 @@ function buscarISBN() {
                 "dataSrc":""
             },
             "columns":[
-                {"data":"nombre_libro"},
+                {"data":"titulo_libro"},
                 {"data":"nombre_autor"},
                 {"data":"options"}
             ],

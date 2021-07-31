@@ -39,19 +39,19 @@
                         <div class="mb-3">
                           <h4>Título del Libro</h4>
                           <div>
-                            <input type="text" class="form-control" placeholder="Nombre del Libro" name="titulo_libro">
+                            <input type="text" class="form-control" placeholder="Nombre del Libro" name="titulo_libro" required>
                           </div>
                         </div>
                         <div class="mb-3">
                           <h4>Subtitulo del Libro</h4>
                           <div>
-                            <input type="text" class="form-control" placeholder="Subtitulo del Libro" name="subtitulo_libro">
+                            <input type="text" class="form-control" placeholder="Subtitulo del Libro" name="subtitulo_libro" required>
                           </div>
                         </div>
                         <div class="mb-3">
                             <h4>Categoria</h4>
                             <div class="input-group">
-                              <select class="custom-select" id="inputGroupSelect04" name="nombre_categoria">
+                              <select class="custom-select" id="inputGroupSelect04" name="nombre_categoria" required>
                                 <option selected>Selecciona una Categoria</option>
                                 <?php  
                                   foreach($data['categorias'] as $categoria){
@@ -67,7 +67,7 @@
                         <div class="mb-3">
                             <h4>Autor</h4>
                             <div class="input-group">
-                              <select class="custom-select" id="inputGroupSelect04" name="nombre_autor">
+                              <select class="custom-select" id="inputGroupSelect04" name="nombre_autor" required>
                                 <option selected>Nombre del Autor</option>
                                 <?php  
                                   foreach($data['autor'] as $autor){
@@ -83,18 +83,72 @@
                         <div class="mb-3">
                             <h4>Numero de ISBN</h4>
                             <div>
-                                <input type="text" class="form-control" placeholder="Numero de ISBN" name="isbn">
+                                <input type="text" class="form-control" placeholder="Numero de ISBN" name="isbn" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <h4>Año</h4>
+                            <div>
+                                <input type="text" class="form-control" placeholder="Año" name="anio" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <h4>Formato</h4>
+                            <div>
+                              <select class="custom-select" id="inputGroupSelect04" name="formato" required onchange="changeFunc(value);">
+                                <option selected>Formato del Libro</option>
+                                <?php  
+                                  foreach($data['formatos'] as $formatos){
+                                    ?>
+                                      <option value="<?php echo $formatos['id'] ?>"><?php echo($formatos['nombre_formato']); ?></option>
+                                    <?php
+                                  }      
+
+                                ?>
+                              </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <h4>Editorial</h4>
+                            <div>
+                              <select class="custom-select" id="inputGroupSelect04" name="editorial" required>
+                                <option selected>Editorial del Libro</option>
+                                <?php  
+                                  foreach($data['editorial'] as $editorial){
+                                    ?>
+                                      <option value="<?php echo $editorial['id'] ?>"><?php echo($editorial['nombre_editorial']); ?></option>
+                                    <?php
+                                  }      
+
+                                ?>
+                              </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <h4>Estado</h4>
+                            <div>
+                              <select class="custom-select" id="inputGroupSelect04" name="estado" required>
+                                <option selected>Estado del Libro</option>
+                                <?php  
+                                  foreach($data['estados'] as $estado){
+                                    ?>
+                                      <option value="<?php echo $estado['id'] ?>"><?php echo($estado['nombre_estado_libro']); ?></option>
+                                    <?php
+                                  }      
+
+                                ?>
+                              </select>
                             </div>
                         </div>
                         <div class="mb-3">
                             <h4>Ubicacion</h4>
                             <div>
-                              <select class="custom-select" id="inputGroupSelect04" name="ubicacion">
+                              <select class="custom-select" id="inputGroupSelect04" name="ubicacion" required>
                                 <option selected>Ubicacion en los Anaqueles</option>
                                 <?php  
-                                  foreach($data['autor'] as $autor){
+                                  foreach($data['ubicacion'] as $ubicacion){
                                     ?>
-                                      <option value="<?php echo $autor['id'] ?>"><?php echo($autor['nombre_autor'].' '.$autor['apellido_paterno'].' '.$autor['apellido_materno'] ); ?></option>
+                                      <option value="<?php echo $ubicacion['id'] ?>"><?php echo($ubicacion['numero_charola'].'/'.$ubicacion['nombre_anaquel']); ?></option>
                                     <?php
                                   }      
 
@@ -105,19 +159,19 @@
                         <div class="mb-3">
                             <h4>DDC</h4>
                             <div>
-                                <input type="text" class="form-control" placeholder="Clasificacion Decimal Dewey" name="dcc">
+                                <input type="text" class="form-control" placeholder="Clasificacion Decimal Dewey" name="dcc" required>
                             </div>
                         </div>
                         <div class="mb-3">
                             <h4>Clasificacion Interna</h4>
                             <div>
-                                <input type="text" class="form-control" placeholder="Clasificacion Interna" name="clasificacion_interna">
+                                <input type="text" class="form-control" placeholder="Clasificacion Interna" name="clasificacion_interna" required>
                             </div>
                         </div>
                         <div class="mb-3">
                             <h4>Cantidad</h4>
                             <div>
-                                <input type="text" class="form-control" placeholder="Cantidad" name="ct">
+                                <input type="text" class="form-control" placeholder="Cantidad" name="ct" required>
                             </div>
                         </div>
                         <div class="mb-3 row">

@@ -55,6 +55,10 @@ class Biblioteca extends Controllers
 		$data['page_title'] = "Agregar Libro";
 		$data['categorias'] = $this->model->selectCategorias();
 		$data['autor'] = $this->model->selectAutores();
+		$data['ubicacion'] = $this->model->selectAnaqueles();
+		$data['formatos'] = $this->model->selectFormatos();
+		$data['editorial'] = $this->model->selectEditorial();
+		$data['estados'] = $this->model->selectEstados();
 		$data['page_functions_js'] = "functions_agregar_libros.js";
 		$this->views->getView($this,"agregar_libro",$data);
 	}
@@ -184,6 +188,7 @@ class Biblioteca extends Controllers
 		$request = $this->model->insertLibro($data);
 		if($request)
 			header("Location:".BASE_URL."/Biblioteca/AgregarLibros?mssg=ok");
+		
 	}
 	public function setPrestamos(){
 		$data = $_POST;

@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function(){
         "columns":[
             {"data":"id"},
             {"data":"nombre_estudiante"},
-			{"data":"nombre_libro"},
+			{"data":"titulo_libro"},
             {"data":"numero_isbn"},
             {"data":"fecha_prestamo"},
 			{"data":"fecha_devolucion"},
