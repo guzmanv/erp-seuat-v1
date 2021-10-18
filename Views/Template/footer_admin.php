@@ -33,6 +33,8 @@
 <script src="<?php echo media(); ?>/plugins/toastr/toastr.min.js"></script>
 <!-- AdminLTE App -->
 <script src="<?php echo media(); ?>/js/adminlte.js"></script>
+<!-- Bootstrap Switch -->
+<script src="<?php echo media(); ?>/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
 <!-- Iconos -->
 <script src="<?php echo media(); ?>/js/app.js"></script>
 

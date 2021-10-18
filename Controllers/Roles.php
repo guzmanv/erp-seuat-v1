@@ -10,9 +10,9 @@ class Roles extends Controllers
 	public function Roles()
 	{
 		$data['page_id'] = 3;
-		$data['page_tag'] = "Roles Usuario";
+		$data['page_tag'] = "Roles de Usuario";
 		$data['page_name'] = "rol_usuario";
-		$data['page_title'] = "Administración de roles";
+		$data['page_title'] = "Roles de usuario";
 		$data['page_functions_js'] = "functions_roles.js";
 		$this->views->getView($this,"roles",$data);
 	}
@@ -25,7 +25,7 @@ class Roles extends Controllers
 
 				if($arrData[$i]['estatus'] == 1)
 				{
-					$arrData[$i]['estatus'] = '<span class="badge badge-primary">Activo</span>';
+					$arrData[$i]['estatus'] = '<span class="badge badge-dark">Activo</span>';
 				}else{
 					$arrData[$i]['estatus'] = '<span class="badge badge-secondary">Inactivo</span>';
 				}
@@ -59,7 +59,7 @@ class Roles extends Controllers
 			if(count($arrData) > 0 ){
 				for ($i=0; $i < count($arrData); $i++) { 
 					if($arrData[$i]['estatus'] == 1 ){
-					$htmlOptions .= '<option value="'.$arrData[$i]['id'].'">'.$arrData[$i]['nombrerol'].'</option>';
+					$htmlOptions .= '<option value="'.$arrData[$i]['id'].'">'.$arrData[$i]['nombre_rol'].'</option>';
 					}
 				}
 			}
@@ -114,7 +114,7 @@ class Roles extends Controllers
 					{
 						$arrResponse = array('estatus' => true, 'msg' => 'Datos guardados correctamente.');
 					}else{
-						$arrResponse = array('estatus' => true, 'msg' => 'Datos Actualizados correctamente.');
+						$arrResponse = array('estatus' => true, 'msg' => 'Datos actualizados correctamente.');
 					}
 				}else if($request_rol == 'exist'){
 					

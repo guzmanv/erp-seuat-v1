@@ -1,4 +1,3 @@
-<!-- Modal -->
 <div class="modal fade" id="ModalFormRol" data-backdrop="static" data-keyboard="true" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
     <div class="modal-content">
@@ -11,12 +10,12 @@
       <div class="modal-body">
       <div class="card card-secondary">
 
-              <form id="formRol" name="formRol">
+              <form id="formRol" name="formRol" class="needs-validation">
                 <input type="hidden" id="idRol" name="idRol" value="">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Nombre</label>
-                    <input type="text" id="txtNombre" name="txtNombre" class="form-control" placeholder="Nombre del rol"  name="Ingresa el nombre" required>
+                    <label for="txtNombre">Nombre</label>
+                    <input type="text" id="txtNombre" name="txtNombre" class="form-control" placeholder="&#xf007 Nombre del rol"  name="Ingresa el nombre"  required>
                   </div>
                   <div class="form-group">
                     <label>Descripción</label>

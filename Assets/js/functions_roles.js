@@ -1,5 +1,19 @@
 var tableRoles;
 var divLoading = document.querySelector("#divLoading");
+/*
+$('.dataTables_wrapper').DataTable( {
+	fixedColumns: {
+		heightMatch: 'none'
+	}}
+	);
+*/
+/*
+$('#tableRoles').dataTable( {
+	scrollY: 100,
+	scrollCollapse: true,
+	"paging": true,
+  } );
+*/
 document.addEventListener('DOMContentLoaded', function(){
 
 	tableRoles = $('#tableRoles').dataTable( {
@@ -15,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function(){
         },
         "columns":[
             {"data":"id"},
-            {"data":"nombrerol"},
+            {"data":"nombre_rol"},
             {"data":"descripcion"},
             {"data":"estatus"},
             {"data":"options"}
@@ -27,12 +41,13 @@ document.addEventListener('DOMContentLoaded', function(){
 	    "ordering": true,
 	    "info": true,
 	    "autoWidth": false,
-	    "scrollY": '42vh',
+	    "scrollY": '44vh',
 	    "scrollCollapse": true,
 	    "bDestroy": true,
 	    "order": [[ 0, "desc" ]],
-	    "iDisplayLength": 20
+	    "iDisplayLength": 25
     });
+
 
 	//Nuevo Rol
 	var formRol = document.querySelector("#formRol");
@@ -94,6 +109,7 @@ function openModal() {
 window.addEventListener('load', function() {
 	//fntEditRol();
 	//fntDelRol();
+   //fntPermisos();
 }, false);
 
 function fntEditRol(idrol){
@@ -106,7 +122,7 @@ function fntEditRol(idrol){
     var request = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
     var ajaxUrl  = base_url+'/Roles/getRol/'+idrol;
     request.open("GET",ajaxUrl ,true);
-	request.send();
+    request.send();
     request.onreadystatechange = function(){
 
         if(request.readyState == 4 && request.status == 200){
@@ -114,7 +130,7 @@ function fntEditRol(idrol){
             if(objData.estatus)
             {
                 document.querySelector("#idRol").value = objData.data.id;
-                document.querySelector("#txtNombre").value = objData.data.nombrerol;
+                document.querySelector("#txtNombre").value = objData.data.nombre_rol;
                 document.querySelector("#txtDescripcion").value = objData.data.descripcion;
 
                 if(objData.data.estatus == 1)
@@ -201,3 +217,68 @@ function fntDelRol(id) {
 	//	})
    // });
 }
+
+
+
+function fntPermisos(idrol){
+	//var btnPermisosRol = document.querySelectorAll(".btnPermisosRol");
+   //btnPermisosRol.forEach(function(btnPermisosRol){
+      //btnPermisosRol.addEventListener('click', function(){
+
+         //var idrol = this.getAttribute("r1");
+         var idrol = idrol;
+         var request = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+         var ajaxUrl = base_url+'/Permisos/getPermisosRol/'+idrol;
+         request.open("GET", ajaxUrl, true);
+         request.send();
+
+         request.onreadystatechange = function(){
+            if(request.readyState == 4 && request.status == 200){
+            //console.log(request.responseText);
+            document.querySelector('#contentAjax').innerHTML = request.responseText;
+            $('.modalPermisos').modal('show');
+			document.querySelector('#formPermisos').addEventListener('submit',fntSavePermisos,false);
+            }
+         }
+         
+    //  });
+ //  });
+}
+
+
+function fntSavePermisos(evnet){
+	evnet.preventDefault();
+	var request = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+	var ajaxUrl = base_url+'/Permisos/setPermisos';
+	var formElement = document.querySelector("#formPermisos");
+	var formData = new FormData(formElement);
+	request.open("POST", ajaxUrl, true);
+	request.send(formData);
+
+	request.onreadystatechange = function(){
+        if(request.readyState == 4 && request.status == 200){
+            var objData = JSON.parse(request.responseText);
+            if(objData.estatus)
+            {
+                swal.fire("Permisos de usuario", objData.msg ,"success");
+            }else{
+                swal.fire("Error", objData.msg , "error");
+            }
+        }
+    }
+}
+
+
+
+function ActivarCheckbox(casilla) 
+{
+	casillaCheckbox=document.getElementsByTagName('input'); //Rescatamos controles tipo Input
+	for(i=0;i<casillaCheckbox.length;i++) //Ejecutamos y recorremos los controles
+	{
+		if(casillaCheckbox[i].type == "checkbox") // Ejecutamos si es una casilla de verificacion
+		{
+			casillaCheckbox[i].checked=casilla.checked; // Si el input es CheckBox se aplica la funcion ActivarCasilla
+		}
+	}
+}
+

@@ -6,6 +6,9 @@
 	//Zona horaria
 	date_default_timezone_set('America/Mexico_City');
 
+	//Desactivar toda notificación de error
+	//error_reporting(0);
+
 	//const LIBS = "Libraries/";
 	//const VIEWS = "Views/";
 	const DB_HOST = "localhost";
