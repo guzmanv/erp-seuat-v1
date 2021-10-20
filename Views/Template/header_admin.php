@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php echo $data['page_tag']; ?></title>
 	<link rel="shortcut icon" href="<?= media();?>/images/icons/icon-48x48.png" />
 
@@ -18,6 +19,8 @@
   <!-- SweetAlert2 -->
   <link rel="stylesheet" href="<?= media(); ?>/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
   <link rel="stylesheet" href="<?= media(); ?>/plugins/sweetalert2/sweetalert2.min.css" type="text/css">
+
+  <link rel="stylesheet" type="text/css" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
 </head>
 
 

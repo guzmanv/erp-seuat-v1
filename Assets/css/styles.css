@@ -444,3 +444,74 @@ btn-group-sm>.btn, .btn-sm {
 .box-typical.box-typical-padding {
     padding: 20px 15px;
 }
+
+
+
+
+
+
+
+/*MODAL PLAN_ESTUDIOS*/
+/*Ocultar Todos los Tabs*/
+.tab {
+    display: none;
+}
+.tabEdit {
+    display: none;
+}
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #045FB4;
+    border: none;  
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.2;
+  }
+  .step.active {
+    opacity: 1;
+  }
+
+  .stepEdit {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #045FB4;
+    border: none;  
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.2;
+  }
+  .stepEdit.active {
+    opacity: 1;
+  }
+
+
+
+/*
+  input.invalid {
+    background-color: #ffdddd;
+  }
+    .tab {
+    display: none;
+  }
+  .step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;  
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+  
+  .step.active {
+    opacity: 1;
+  }
+  
+  .step.finish {
+    background-color: #3b7ddd;
+  }
+  */
