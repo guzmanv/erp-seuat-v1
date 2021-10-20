@@ -51,7 +51,7 @@
                           </div>
                           <div class="form-check">
                             <input class="form-check-input" type="radio" name="radio2">
-                            <label class="form-check-label">Innactivo</label>
+                            <label class="form-check-label">Inactivo</label>
                           </div>
                         </div>
                         <div class="mb-3 row">
