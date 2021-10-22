@@ -282,7 +282,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="categoriaservicios" class="nav-link">
+                <a href="categoria_servicios" class="nav-link">
                    <i class="ml-3 mr-2" data-feather="circle"></i>
                   <p>Conceptos de servicios</p>
                 </a>
