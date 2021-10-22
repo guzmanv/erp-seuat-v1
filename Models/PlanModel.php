@@ -38,10 +38,36 @@
             $nombrePlan = $data['txtNombreEdit'];
             $abreviaturaPlan = $data['txtAbreviaturaEdit'];
             $estatus = $data['listEstatusEdit'];
-
-            $sql = "UPDATE t_organizacion_planes SET nombre_plan = ? ,abreviatura = ?,estatus = ?, fecha_actualizacion = NOW(),id_usuario_creacion = ?,id_usuario_actualizacion = ? WHERE id = $intIdPlanEdit";
-            $request = $this->update($sql,array($nombrePlan,$abreviaturaPlan,$estatus,1,1));
+            $request;
+            $sqlExistNom = "SELECT *FROM t_organizacion_planes WHERE nombre_plan = '$nombrePlan' AND id != $idPlan";
+            $requestExistNom = $this->select($sqlExistNom);
+            if($requestExistNom){
+                $sqlExistAbre = "SELECT *FROM t_organizacion_planes WHERE abreviatura = '$abreviaturaPlan' AND id != $idPlan";
+                $requestExistAbre = $this->select($sqlExistAbre);
+                $request['estatus'] = TRUE;
+                $request['msg'] = 'Nombre existente en la Base de Datos';
+                if($requestExistAbre){
+                    $request['estatus'] = TRUE;
+                    $request['msg'] = 'Nombre y Abreviatura existente en la Base de Datos';
+                }else{
+                    $request['estatus'] = TRUE;
+                    $request['msg'] = 'Nombre existente en la Base de datos';
+                }
+            }else{
+                $sqlExistAbre = "SELECT *FROM t_organizacion_planes WHERE abreviatura = '$abreviaturaPlan' AND id != $idPlan";
+                $requestExistAbre = $this->select($sqlExistAbre);
+                if($requestExistAbre){
+                    $request['estatus'] = TRUE;
+                    $request['msg'] = "Abreviatura existente en la Base de datos";
+                }else{
+                    $request['estatus'] = FALSE;
+                    $request['msg'] = "";
+                    $sqlUpdate = "UPDATE t_organizacion_planes SET nombre_plan = ? ,abreviatura = ?,estatus = ?, fecha_actualizacion = NOW(),id_usuario_creacion = ?,id_usuario_actualizacion = ? WHERE id = $idPlan";
+                    $requestUpdate = $this->update($sqlUpdate,array($nombrePlan,$abreviaturaPlan,$estatus,1,1));
+                }
+            }
             return $request;
+
         }
 
         public function deletePlan(int $intIdPlan){

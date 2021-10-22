@@ -45,17 +45,33 @@
                 $orden = null;
             }
             $request;
-            $sqlExist = "SELECT *FROM t_nivel_educativos WHERE nombre_nivel_educativo = '$nombreNivelEducativo' AND id != $idNivelEducativo";
-            $requestExist = $this->select($sqlExist);
-            if($requestExist){
+            $sqlExistNom = "SELECT *FROM t_nivel_educativos WHERE nombre_nivel_educativo = '$nombreNivelEducativo' AND id != $idNivelEducativo";
+            $requestExistNom = $this->select($sqlExistNom);
+            if($requestExistNom){
+                $sqlExistAbre = "SELECT *FROM t_nivel_educativos WHERE abreviatura = '$abreviatura' AND id != $idNivelEducativo";
+                $requestExistAbre = $this->select($sqlExistAbre);
                 $request['estatus'] = TRUE;
+                $request['msg'] = 'Nombre existente en la Base de Datos';
+                if($requestExistAbre){
+                    $request['estatus'] = TRUE;
+                    $request['msg'] = 'Nombre y Abreviatura existente en la Base de Datos';
+                }else{
+                    $request['estatus'] = TRUE;
+                    $request['msg'] = 'Nombre existente en la Base de datos';
+                }
             }else{
-                $request['estatus'] = FALSE;
+                $sqlExistAbre = "SELECT *FROM t_nivel_educativos WHERE abreviatura = '$abreviatura' AND id != $idNivelEducativo";
+                $requestExistAbre = $this->select($sqlExistAbre);
+                if($requestExistAbre){
+                    $request['estatus'] = TRUE;
+                    $request['msg'] = "Abreviatura existente en la Base de datos";
+                }else{
+                    $request['estatus'] = FALSE;
+                    $request['msg'] = "";
+                    $sqlUpdate = "UPDATE t_nivel_educativos SET nombre_nivel_educativo = ?, abreviatura = ?, orden = ?,estatus = ?, fecha_actualizacion = NOW(),id_usuario_creacion = ?,id_usuario_actualizacion = ? WHERE id = $idNivelEducativo";
+                    $requestUpdate = $this->update($sqlUpdate,array($nombreNivelEducativo,$abreviatura,$orden,$estatus,1,1));
+                }
             }
-
-
-            //$sql = "UPDATE t_nivel_educativos SET nombre_nivel_educativo = ?, abreviatura = ?, orden = ?,estatus = ?, fecha_actualizacion = NOW(),id_usuario_creacion = ?,id_usuario_actualizacion = ? WHERE id = $idNivelEducativo";
-            //$request = $this->update($sql,array($nombreNivelEducativo,$abreviatura,$orden,$estatus,1,1));
             return $request;
         }
 

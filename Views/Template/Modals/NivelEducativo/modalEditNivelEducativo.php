@@ -15,15 +15,15 @@
                         <div class="card-body"> 
                             <div class="form-group">
                                 <label>Nombre</label>
-                                <input type="text" id="txtNombreEdit" name="txtNombreEdit" class="form-control form-control-sm" placeholder="EJ: Técnico Superior Universitario"  name="" required>
+                                <input type="text" id="txtNombreEdit" name="txtNombreEdit" class="form-control form-control-sm" placeholder="EJ: Técnico Superior Universitario"  name="" maxlength="45" required>
                             </div>
                             <div class="form-group">
                                 <label>Abreviatura</label>
-                                <input type="text" id="txtAbreviaturaEdit" name="txtAbreviaturaEdit" class="form-control form-control-sm" placeholder="EJ: TSU"  name="" required>
+                                <input type="text" id="txtAbreviaturaEdit" name="txtAbreviaturaEdit" class="form-control form-control-sm" placeholder="EJ: TSU"  name="" maxlength="5" required>
                             </div>
                             <div class="form-group">
                                 <label>Orden</label>
-                                <input type="text" id="txtOrdenEdit" name="txtOrdenEdit" onkeypress="return validarNumeroInput(event)" class="form-control form-control-sm" placeholder="EJ: 2">
+                                <input type="text" id="txtOrdenEdit" name="txtOrdenEdit" onkeypress="return validarNumeroInput(event)" class="form-control form-control-sm" maxlength="5" placeholder="EJ: 2">
                             </div>
                             <div class="form-group">
                                 <label>Estatus</label>
