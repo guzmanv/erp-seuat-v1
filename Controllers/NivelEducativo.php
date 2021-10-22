@@ -59,13 +59,13 @@
             }
             if($intIdNivelEducativoEdit !=0){
                 $arrData = $this->model->updateNivelEducativo($intIdNivelEducativoEdit,$data);
-                /*  if($arrData){
+                if($arrData['estatus'] != TRUE){
                     $arrResponse = array('estatus' => true, 'msg' => 'Datos actualizados correctamente');
                 }else{
-                    $arrResponse = array('estatus' => false, 'msg' => 'No es posible actualizar los datos');
-                } */
+                    $arrResponse = array('estatus' => false, 'msg' => $arrData['msg']);
+                }
             }
-            echo json_encode($arrData,JSON_UNESCAPED_UNICODE);
+            echo json_encode($arrResponse,JSON_UNESCAPED_UNICODE);
             die();
         }
 

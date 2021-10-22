@@ -19,7 +19,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Abreviatura</label>
-                                <input type="text" id="txtAbreviaturaNuevo" name="txtAbreviaturaNuevo" class="form-control form-control-sm" placeholder="EJ: TSU" maxlength="5" required>
+                                <input type="text" id="txtAbreviaturaNuevo" name="txtAbreviaturaNuevo" class="form-control form-control-sm" placeholder="EJ: TSU" maxlength="6" required>
                             </div>
                             <div class="form-group">
                                 <label>Orden</label>

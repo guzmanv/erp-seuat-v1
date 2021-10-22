@@ -58,10 +58,10 @@
             }
             if($intIdPlanEdit !=0){
                 $arrData = $this->model->updatePlan($intIdPlanEdit,$data);
-                if($arrData){
+                if($arrData['estatus'] != TRUE){
                     $arrResponse = array('estatus' => true, 'msg' => 'Datos actualizados correctamente');
                 }else{
-                    $arrResponse = array('estatus' => false, 'msg' => 'No es posible actualizar los datos');
+                    $arrResponse = array('estatus' => false, 'msg' => $arrData['msg']);
                 }
             }
             echo json_encode($arrResponse,JSON_UNESCAPED_UNICODE);

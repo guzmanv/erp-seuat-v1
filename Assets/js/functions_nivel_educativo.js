@@ -127,7 +127,7 @@ formNivelEducativoEdit.onsubmit = function(e){
         if(request.readyState == 4 && request.status == 200){
             var objData = JSON.parse(request.responseText);
             console.log(objData);
-             /* if(objData.estatus){
+              if(objData.estatus){
                 formNivelEducativoEdit.reset();
                 swal.fire("Nivel educativo",objData.msg,"success").then((result) =>{
                     $('#dimissModalEdit').click();
@@ -135,7 +135,7 @@ formNivelEducativoEdit.onsubmit = function(e){
                 tableNivelEducativo.api().ajax.reload();
             }else{
                 swal.fire("Error",objData.msg,"error");
-            }  */
+            }
         }
         return false;
     }
