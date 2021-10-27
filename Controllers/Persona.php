@@ -20,9 +20,21 @@
             echo json_encode($arrData, JSON_UNESCAPED_UNICODE);
             die();
         }
+        public function getCarreraInteres(){
+            $idNivel = $_GET['idNivel'];
+            $arrData = $this->model->selectCarrerasInteres($idNivel);
+            echo json_encode($arrData,JSON_UNESCAPED_UNICODE);
+            die();
+        }
         public function getPersonaEdit($idPersona){
             $idPersona = $idPersona;
             $arrData = $this->model->selectPersonaEdit($idPersona);
+            echo json_encode($arrData, JSON_UNESCAPED_UNICODE);
+            die();
+        }
+        public function getPersonaVer($idPersona){
+            $idPersona = $idPersona;
+            $arrData = $this->model->selectPersonaVer($idPersona);
             echo json_encode($arrData, JSON_UNESCAPED_UNICODE);
             die();
         }
@@ -38,9 +50,9 @@
 					</button>
 					<div class="dropdown-menu">
                         <button class="dropdown-item btn btn-outline-secondary btn-sm btn-flat icono-color-principal btnVerPersona" onClick="fntVerPersona('.$arrData[$i]['id'].')" data-toggle="modal" data-target="#ModalFormVerPersona" title="Ver"> &nbsp;&nbsp; <i class="fas fa-eye icono-azul"></i> &nbsp; Ver</button>
-						<button class="dropdown-item btn btn-outline-secondary btn-sm btn-flat icono-color-principal btnEditPersona" onClick="fntEditPersona('.$arrData[$i]['id'].')" data-toggle="modal" data-target="#ModalFormEditPersona" title="Editar"> &nbsp;&nbsp; <i class="fas fa-pencil-alt"></i> &nbsp; Editar</button>
+						<!--<button class="dropdown-item btn btn-outline-secondary btn-sm btn-flat icono-color-principal btnEditPersona" onClick="fntEditPersona('.$arrData[$i]['id'].')" data-toggle="modal" data-target="#ModalFormEditPersona" title="Editar"> &nbsp;&nbsp; <i class="fas fa-pencil-alt"></i> &nbsp; Editar</button>
 						<div class="dropdown-divider"></div>
-						<button class="dropdown-item btn btn-outline-secondary btn-sm btn-flat icono-color-principal btnDelPersona" onClick="fntDelPersona('.$arrData[$i]['id'].')" title="Eliminar"> &nbsp;&nbsp; <i class="far fa-trash-alt "></i> &nbsp; Eliminar</button>
+						<button class="dropdown-item btn btn-outline-secondary btn-sm btn-flat icono-color-principal btnDelPersona" onClick="fntDelPersona('.$arrData[$i]['id'].')" title="Eliminar"> &nbsp;&nbsp; <i class="far fa-trash-alt "></i> &nbsp; Eliminar</button>-->
 						<!--<a class="dropdown-item" href="#">link</a>-->
 					</div>
 				</div>
@@ -64,15 +76,15 @@
                 if($arrData){
                     $arrResponse = array('estatus' => true, 'msg' => 'Datos guardados correctamente');
                 }else{
-                    $arrResponse = array('estatus' => false, 'mgg' => 'No es posible guardar los datos');
+                    $arrResponse = array('estatus' => false, 'msg' => 'No es posible guardar los datos');
                 }
             }
             if($intIdPersonaEdit !=0){
                 $arrData = $this->model->updatePersona($intIdPersonaEdit,$data);
                 if($arrData){
-                    $arrResponse = array('estatus' => true, 'msg' => 'Datos Actualizados Correctamente');
+                    $arrResponse = array('estatus' => true, 'msg' => 'Datos actualizados correctamente');
                 }else{
-                    $arrResponse = array('estatus' => true, 'mgg' => 'No es posible actualizar los datos');
+                    $arrResponse = array('estatus' => true, 'msg' => 'No es posible actualizar los datos');
                 }
             }
             echo json_encode($arrResponse,JSON_UNESCAPED_UNICODE);
