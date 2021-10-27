@@ -104,7 +104,7 @@
 
         //Lista de Inscritos en una Carrera
         public function selectInscritos(int $idCarrera){
-            $sql = "SELECT ins.id,CONCAT(per.nombre_persona,' ',per.ap_paterno,' ',per.ap_materno) AS nombre_completo FROM t_inscripciones AS ins
+            $sql = "SELECT ins.id,per.nombre_persona,CONCAT(per.ap_paterno,' ',per.ap_materno) AS apellidos FROM t_inscripciones AS ins
             INNER JOIN t_personas AS per ON ins.id_personas = per.id
             WHERE ins.id_plan_estudios = $idCarrera";
             $request = $this->select_all($sql);

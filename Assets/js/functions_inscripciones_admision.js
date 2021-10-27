@@ -88,37 +88,20 @@ function buscarPersona(){
 
 function fnListaInscritos(answer){
     var idCarrera = answer.id;
-    var tableLista;
-    tableLista = $('#tableListaInscritos').dataTable( {
-        "aProcessing":true,
-        "aServerSide":true,
-        "language": {
-            //url:"<?php echo media(); ?>/plugins/Spanish.json"
-            "url": " "+base_url+"/Assets/plugins/Spanish.json"
-        },
-        "ajax":{
-            "url": " "+base_url+"/Inscripcion/getInscritos?idCarrera="+idCarrera,
-            "dataSrc":""
-        },
-        "columns":[
-            {"data":"numeracion"},
-            {"data":"nombre_completo"}
+    var url= base_url+"/Inscripcion/getInscritos?idCarrera="+idCarrera;
+    fetch(url)
+        .then(res => res.json())
+        .then((resultado) => {
+            document.getElementById('valoresListaInscritos').innerHTML = "";
+            var contador = 0;
+			resultado.forEach(element => {
+                contador += 1;
+                console.log(element);
+                document.getElementById('valoresListaInscritos').innerHTML +='<tr><td>'+contador+'</td><td>'+element.nombre_persona+'</td><td>'+element.apellidos+'</td></tr>'
+            });
+        })
+        .catch(err => { throw err });
 
-        ],
-        "responsive": true,
-        "paging": true,
-        "lengthChange": false,
-        "searching": false,
-        "ordering": true,
-        "info": false,
-        "autoWidth": false,
-        "scrollY": '42vh',
-        "scrollCollapse": true,
-        "bDestroy": true,
-        "order": [[ 0, "desc" ]],
-        "iDisplayLength": 5
-    });    
-    $('#tableListaInscritos').DataTable();
 }
 
 
