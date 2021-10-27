@@ -3,6 +3,7 @@
     getModal("Inscripcion/modalNuevaInscripcion",$data);
     getModal("Inscripcion/modalDocumentacion",$data);
     getModal("Inscripcion/modalEditInscripcion",$data);
+    getModal("Inscripcion/modalListaInscritos",$data);
 ;
 ?>
 <div id="contentAjax"></div>
@@ -34,12 +35,12 @@
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Nombre de la Persona</th>
-                                                <th>Plantel</th> 
-                                                <th>Carrera</th>
-                                                <th>Grado</th>
+                                                <th>Nombre de la Carrera</th>
+                                                <th>Grado</th> 
                                                 <th>Grupo</th>
-                                                <th>Validacion</th>
+                                                <th>Total inscritos</th>
+                                                <!--<th>Grupo</th>
+                                                <th>Validacion</th>-->
                                                 <th>Acciones</th>
                                             </tr>
                                         </thead>
