@@ -27,13 +27,11 @@ document.addEventListener('DOMContentLoaded', function(){
         },
         "columns":[
             {"data":"numeracion"},
-            {"data":"nombre_persona"},
-            {"data":"nombre_plantel"},
             {"data":"nombre_carrera"},
-            {"data":"grado"},
-            {"data":"grupo"},
-            {"data":"validacion"},
-            {"data":"options"}
+            {"data":"numero_natural"},
+            {"data":"nombre_grupo"},
+            {"data":"total"},
+            {"data":'options'}
 
         ],
         "responsive": true,
@@ -86,6 +84,44 @@ function buscarPersona(){
     $('#tablePersonas').DataTable();
 }
 
+//Lista de Inscritos en una Carrera y Mostrar en un MODAL
+
+function fnListaInscritos(answer){
+    var idCarrera = answer.id;
+    var tableLista;
+    tableLista = $('#tableListaInscritos').dataTable( {
+        "aProcessing":true,
+        "aServerSide":true,
+        "language": {
+            //url:"<?php echo media(); ?>/plugins/Spanish.json"
+            "url": " "+base_url+"/Assets/plugins/Spanish.json"
+        },
+        "ajax":{
+            "url": " "+base_url+"/Inscripcion/getInscritos?idCarrera="+idCarrera,
+            "dataSrc":""
+        },
+        "columns":[
+            {"data":"numeracion"},
+            {"data":"nombre_completo"}
+
+        ],
+        "responsive": true,
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": false,
+        "autoWidth": false,
+        "scrollY": '42vh',
+        "scrollCollapse": true,
+        "bDestroy": true,
+        "order": [[ 0, "desc" ]],
+        "iDisplayLength": 5
+    });    
+    $('#tableListaInscritos').DataTable();
+}
+
+
 function seleccionarPersona(answer){
     idPersonaSeleccionada = answer.id;
     let nombrePersona = answer.getAttribute('rl');
@@ -114,7 +150,7 @@ formInscripcionNueva.onsubmit = function(e){
     request.onreadystatechange = function(){
         if(request.readyState == 4 && request.status == 200){
             var objData = JSON.parse(request.responseText);
-            //console.log(objData);
+            console.log(objData);
             if(objData.estatus){
                 formInscripcionNueva.reset();
                 swal.fire("Inscripcion",objData.msg,"success").then((result) =>{
