@@ -1,8 +1,8 @@
 <?php
     headerAdmin($data);
-    getModal("modalNuevaPersona",$data);
-    getModal("modalEditPersona",$data);
-    getModal("modalVerPersona",$data);
+    getModal("Persona/modalNuevaPersona",$data);
+    getModal("Persona/modalEditPersona",$data);
+    getModal("Persona/modalVerPersona",$data);
 ?>
 <div id="contentAjax"></div>
 <div class="wrapper">
