@@ -25,24 +25,19 @@
         }
         //Obtener Lista de Inscripciones(Admision)
         public function getInscripcionesAdmision(){
-            $arrData = $this->model->selectInscripciones();
+            $arrData = $this->model->selectInscripcionesAdmision();
             for ($i=0; $i<count($arrData); $i++){
                 $arrData[$i]['numeracion'] = $i+1;
-                if($arrData[$i]['validacion'] == 1){
+                //$arrData[$i]['nombre_plantel'] = $arrData[$i]['nombre_plantel'].'('.$arrData[$i]['municipio'].')';
+                /*if($arrData[$i]['validacion'] == 1){
                     $arrData[$i]['validacion'] = '<span class="badge badge-success">Validado</span>';
                 }else{
                     $arrData[$i]['validacion'] = '<span class="badge badge-warning">No Validado</span>';
-                }
-                $arrData[$i]['options'] = '<div class="text-center">
-				<div class="btn-group">
-					<button type="button" class="btn btn-outline-secondary btn-xs icono-color-principal dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					<i class="fas fa-layer-group"></i> &nbsp; Acciones
-					</button>
-					<div class="dropdown-menu">
-						<button class="dropdown-item btn btn-outline-secondary btn-sm btn-flat icono-color-principal btnEditInscripcion" onClick="fntEditInscripcion('.$arrData[$i]['id'].')" data-toggle="modal" data-target="#ModalFormEditInscripcion" title="Editar"> &nbsp;&nbsp; <i class="fas fa-pencil-alt"></i> &nbsp; Editar</button>
-					</div>
-				</div>
-				</div>';
+                }*/
+               
+                $arrData[$i]['options'] = '<button type="button"  id="'.$arrData[$i]['id'].'" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalFormListaInscritos" onclick="fnListaInscritos(this)">Seleccionar</button>';
+
+                
             }
             echo json_encode($arrData,JSON_UNESCAPED_UNICODE);
             die();
@@ -104,7 +99,7 @@
                 if($arrData){
                     $arrResponse = array('estatus' => true, 'msg' => 'Datos guardados correctamente');
                 }else{
-                    $arrResponse = array('estatus' => false, 'mgg' => 'No es posible Guardar los Datos');
+                    $arrResponse = array('estatus' => false, 'msg' => 'No es posible Guardar los Datos');
                 }
             }
             //Editar
@@ -143,6 +138,17 @@
         //Obtener Inscripcion por ID
         public function getInscripcion(int $idInscripcion){
             $arrData = $this->model->selectInscripcion($idInscripcion);
+            echo json_encode($arrData,JSON_UNESCAPED_UNICODE);
+            die();
+        }
+
+        //Obtener Lista de Inscritos en una Carrera
+        public function getInscritos(){
+            $idCarrera = $_GET['idCarrera'];
+            $arrData = $this->model->selectInscritos($idCarrera);
+            for ($i=0; $i<count($arrData); $i++){
+                $arrData[$i]['numeracion'] = $i+1;
+            }
             echo json_encode($arrData,JSON_UNESCAPED_UNICODE);
             die();
         }
