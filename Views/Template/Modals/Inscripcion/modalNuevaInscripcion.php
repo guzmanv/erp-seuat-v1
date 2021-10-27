@@ -37,7 +37,7 @@
                                                 <?php 
                                                     foreach ($data['planteles'] as $value) {
                                                         ?>
-                                                            <option value="<?php echo $value['id'] ?>"><?php echo $value['nombre_plantel'] ?></option>
+                                                            <option value="<?php echo $value['id'] ?>"><?php echo $value['nombre_plantel'].' ('.$value['municipio'].')'  ?></option>
                                                         <?php
                                                     }    
                                                 ?>
