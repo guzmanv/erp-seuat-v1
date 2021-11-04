@@ -6,7 +6,7 @@
         public function persona(){
             $data['page_id'] = 9;
             $data['page_tag'] = "Persona";
-            $data['page_title'] = "Lista de Persona SEUAT";
+            $data['page_title'] = "Personas";
             $data['page_content'] = "";
             $data['page_functions_js'] = "functions_persona.js";
             $data['estados'] = $this->model->selectEstados();

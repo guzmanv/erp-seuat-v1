@@ -1,21 +1,31 @@
 document.addEventListener('DOMContentLoaded', function(){
-	tableInscripciones = $('#tableInscripciones').dataTable( {
+	fnPlantelSeleccionadoDatatable(document.querySelector('#listPlantelDatatable').value);
+});
+function fnPlantelSeleccionadoDatatable(value){
+    var idPlantel = value;
+    var nombrePlantel = document.querySelector('#listPlantelDatatable');
+    var text= nombrePlantel.options[nombrePlantel.selectedIndex].text;
+    document.querySelector('#nombrePlantelDatatable').innerHTML = text;
+    tableInscripciones = $('#tableInscripciones').dataTable( {
 		"aProcessing":true,
 		"aServerSide":true,
         "language": {
         	"url": " "+base_url+"/Assets/plugins/Spanish.json"
         },
         "ajax":{
-            "url": " "+base_url+"/Inscripcion/getInscripcionesControlEscolar",
+            "url": " "+base_url+"/Inscripcion/getInscripcionesControlEscolar?idplantel="+idPlantel,
             "dataSrc":""
         },
         "columns":[
             {"data":"numeracion"},
-            {"data":"nombre_persona"},
-            {"data":"nombre_plantel"},
             {"data":"nombre_carrera"},
-            {"data":"validacion"},
-            {"data":"options"}
+            {"data":"nombre_nivel_educativo"},
+            {"data":"grado"},
+            {"data":"nombre_plan"},
+            {"data":"nombre_turno"},
+            {"data":"nombre_grupo"},
+            {"data":"total"},
+            {"data":'options'}
 
         ],
         "responsive": true,
@@ -31,5 +41,4 @@ document.addEventListener('DOMContentLoaded', function(){
 	    "order": [[ 0, "asc" ]],
 	    "iDisplayLength": 25
     });
-});
-$('#tableInscripciones').DataTable();
+}$('#tableInscripciones').DataTable();
