@@ -4,7 +4,6 @@
 ?>
 
 <div id="contentAjax"></div>
-
 <div class="wrapper">
 
   <!-- Content Wrapper. Contains page content -->
@@ -62,8 +61,6 @@
             </div>
 
 
-
-  
           </div>
           
         </div>
