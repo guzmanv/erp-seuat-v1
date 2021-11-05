@@ -330,6 +330,15 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="<?php echo BASE_URL ?>/Estudiantes/estudiantes" class="nav-link">
+                                <i class="ml-3 mr-2" data-feather="users"></i>
+                                <!--<i class="nav-icon fas fa-university"></i>-->
+                                <p>
+                                    Estudiantes
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="<?php echo BASE_URL ?>/Salon/salon" class="nav-link">
                                 <i class="ml-3 mr-2" data-feather="cast"></i>
                                 <!--<i class="nav-icon fas fa-university"></i>-->
