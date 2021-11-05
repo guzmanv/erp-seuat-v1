@@ -10,8 +10,8 @@
             </div>
             <div class="modal-body">
                 <div class="card card-secondary">
-                    <form id="formCategoriaNueva" name="formCategoriaNueva">
-                        <input type="hidden" id="idCategoriaNueva" name="idCategoriaNueva" value="">
+                    <form id="formDocumentacionNueva" name="formDocumentacionNueva">
+                        <input type="hidden" id="idEstudiante" name="idEstudiante" value="">
                         <div class="card-body"> 
                             <h5 class="card-title">Documentacion</h5>
                             <table class="table table-striped">
@@ -25,7 +25,7 @@
                                     </tr>
                                 </thead>
                                 <tbody id="tbDocumentacionIns">
-                                    <!-- <tr>
+                                    <tr>
                                         <th scope="row">1</th>
                                         <td>Acta de Nacimiento</td>
                                         <td>
@@ -81,7 +81,7 @@
                                             <input type="checkbox" aria-label="Checkbox for following text input">
                                         </div>
                                     </td>
-                                    </tr> -->
+                                    </tr> 
                                 </tbody>
                                 </table>
                         </div>
