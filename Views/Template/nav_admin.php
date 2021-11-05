@@ -334,7 +334,7 @@
                                 </li>
                             </ul>
                         </li>
-						<li class="nav-header"><h4>DIDCIRC</h4></li>
+						<li class="nav-header"><h4>DIRC</h4></li>
                         <li class="nav-item">
                             <a href="<?php echo BASE_URL ?>/Plantel" class="nav-link">
                                 <i class="ml-3 mr-2" data-feather="layout"></i>
