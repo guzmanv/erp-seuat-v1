@@ -330,7 +330,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo BASE_URL ?>/ControlEscolar/salon" class="nav-link">
+                            <a href="<?php echo BASE_URL ?>/Salon/salon" class="nav-link">
                                 <i class="ml-3 mr-2" data-feather="cast"></i>
                                 <!--<i class="nav-icon fas fa-university"></i>-->
                                 <p>
@@ -339,7 +339,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo BASE_URL ?>/ControlEscolar/turnos" class="nav-link">
+                            <a href="<?php echo BASE_URL ?>/Turnos/turnos" class="nav-link">
                                 <i class="ml-3 mr-2" data-feather="clock"></i>
                                 <!--<i class="nav-icon fas fa-university"></i>-->
                                 <p>

@@ -1,5 +1,7 @@
 <?php
     headerAdmin($data);
+    getModal("Salon/modalNuevoSalon",$data);
+    getModal("Salon/modalEditSalon",$data);
 ?>
 <div class="wrapper">
     <div class="content-wrapper">
@@ -11,13 +13,10 @@
                     </div>
                     <div class="col-sm-5">
                         <ol class="breadcrumb float-sm-right btn-block">
-                            <button type="button"  class="btn btn-inline btn-primary btn-sm btn-block" data-toggle="modal" data-target="#"><i class="fa fa-plus-circle fa-md"></i> Nuevo</button>
-                            <!--<li class="breadcrumb-item"><i class="fa fa-home fa-md"></i><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active"><a href="<?= base_url(); ?>/roles"><?= $data['page_title'] ?></a></li>-->
+                            <button type="button"  class="btn btn-inline btn-primary btn-sm btn-block" data-toggle="modal" data-target="#ModalFormNuevoSalon"><i class="fa fa-plus-circle fa-md"></i> Nuevo</button>
                         </ol>
                     </div>
                 </div>
-            </div>
         </div>
         <div class="content">
             <div class="container-fluid">
