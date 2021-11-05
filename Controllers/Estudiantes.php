@@ -44,5 +44,11 @@
             echo json_encode($arrData,JSON_UNESCAPED_UNICODE);
             die();
         }
+        public function getDocumentacion(){
+            $idInscripcion = $_GET['idIns'];
+            $arrData = $this->model->selectDocumentacion($idInscripcion);
+            echo json_encode($arrData,JSON_UNESCAPED_UNICODE);
+            die();
+        }
     }
 ?>

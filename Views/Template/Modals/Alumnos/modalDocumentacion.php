@@ -25,7 +25,7 @@
                                     </tr>
                                 </thead>
                                 <tbody id="tbDocumentacionIns">
-                                    <tr>
+                                    <!-- tr>
                                         <th scope="row">1</th>
                                         <td>Acta de Nacimiento</td>
                                         <td>
@@ -81,7 +81,7 @@
                                             <input type="checkbox" aria-label="Checkbox for following text input">
                                         </div>
                                     </td>
-                                    </tr> 
+                                    </tr>  -->
                                 </tbody>
                                 </table>
                         </div>

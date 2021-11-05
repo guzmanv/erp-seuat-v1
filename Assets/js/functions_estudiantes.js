@@ -40,3 +40,20 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 });
 $('#tableEstudiantes').DataTable();
+
+
+function fntDocumentacionInscripcion(value){
+    var idInscripcion = value;
+    let urlDocumentacion = base_url+"/Estudiantes/getDocumentacion?idIns="+idInscripcion;
+    fetch(urlDocumentacion)
+    .then(res => res.json())
+    .then((resultDocumentacion) =>{
+        var numeracion = 0;
+        document.querySelector('#tbDocumentacionIns').innerHTML="";
+        resultDocumentacion.forEach(element => {
+            numeracion +=1;
+            document.querySelector('#tbDocumentacionIns').innerHTML+="<tr><th scope='row'>"+numeracion+"</th><td>"+element.tipo_documento+"</td><td><div class='custom-control custom-switch custom-switch-off-danger custom-switch-on-success'><input type='checkbox' aria-label='Checkbox for following text input'></div></td><td><div class='custom-control custom-switch custom-switch-off-danger custom-switch-on-success'><input type='checkbox' aria-label='Checkbox for following text input'></div></td><td><div class='custom-control custom-switch custom-switch-off-danger custom-switch-on-success'><input type='checkbox' aria-label='Checkbox for following text input'></div></td></tr>";
+        });
+    })
+    .catch(err => {throw err});
+}

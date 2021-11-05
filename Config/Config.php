@@ -8,10 +8,10 @@
 
 	//const LIBS = "Libraries/";
 	//const VIEWS = "Views/";
-	const DB_HOST = "localhost";
+	const DB_HOST = "10.10.0.45";
 	const DB_NAME = "erpseuat";
-	const DB_USER = "root";
-	const DB_PASSWORD = "";
+	const DB_USER = "josesantiz";
+	const DB_PASSWORD = "1234";
 	const DB_CHARSET = "utf8";
 
 	//Delimitadores decimal y millar Ej. 27,1985.00

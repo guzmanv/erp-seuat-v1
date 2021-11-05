@@ -18,5 +18,15 @@
 			$request = $this->select_all($sql);
 			return $request;
 		}
+        public function selectDocumentacion(int $idInscripcion){
+            $idInscripcion = $idInscripcion;
+            $sql = "SELECT ins.id AS id_inscripcion, doc.id AS id_documento, detdoc.id AS id_detalle_documento,
+            detdoc.tipo_documento FROM t_inscripciones AS ins
+            INNER JOIN t_documentos AS doc ON ins.id_documentos = doc.id
+            INNER JOIN t_detalle_documentos AS detdoc ON detdoc.id_documentos = doc.id
+            WHERE ins.id = $idInscripcion";
+            $request = $this->select_all($sql);
+            return $request;
+        }
 	}
 ?>
